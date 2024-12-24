@@ -83,6 +83,8 @@ section {
     border-radius: 15px;
     background-color: var(--bg-secondary);
     box-shadow: 0 4px 6px var(--shadow);
+    position: relative;
+    overflow: hidden;
 }
 
 h2 {
@@ -322,6 +324,14 @@ footer {
     border-radius: 8px;
     margin-bottom: 1rem;
     box-shadow: 0 2px 4px var(--shadow);
+    width: calc(100% + 2rem); /* Add this */
+    margin-left: -1rem; /* Add this */
+    margin-right: -1rem; /* Add this */
+}
+
+.section-experience {
+    position: relative;
+    overflow: visible;
 }
 
 .experience-item {
