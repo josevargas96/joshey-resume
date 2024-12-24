@@ -164,6 +164,43 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* Skills styles */
+.skills-wrapper {
+    display: grid;
+    gap: 2rem;
+}
+
+.skills-category h3 {
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tag {
+    background: var(--bg-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 0.5rem;
+    }
+    
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
 /* Footer styles */
 footer {
     text-align: center;
