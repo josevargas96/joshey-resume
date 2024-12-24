@@ -1,73 +1,136 @@
+/* Variables for theming */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #2d3436;
+    --bg-secondary: #222;
+    --text-primary: #f8f9fa;
+    --text-secondary: #dfe6e9;
+    --accent: #74b9ff;
+    --border: #636e72;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
 /* Base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
 }
 
 /* Header styles */
 header {
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 0;
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    margin-bottom: 40px;
 }
 
 h1 {
-    color: #333;
-    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-size: 2.5rem;
 }
 
 /* Section styles */
 section {
-    margin: 30px 0;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: var(--bg-secondary);
+    box-shadow: 0 4px 6px var(--shadow);
 }
 
 h2 {
-    color: #444;
-    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
 }
 
 /* Experience section styles */
 .experience-item {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: var(--bg-primary);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: transform 0.2s;
+}
+
+.experience-item:hover {
+    transform: translateY(-2px);
 }
 
 .experience-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .company-name {
-    font-size: 1.2rem;
-    color: #333;
-    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .work-period {
-    color: #666;
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
 .job-title {
-    color: #444;
+    color: var(--accent);
     font-size: 1.1rem;
     margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .achievements {
@@ -76,24 +139,69 @@ h2 {
 }
 
 .achievements li {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-    color: #555;
-}
-
-/* Placeholder styles */
-.placeholder {
-    padding: 20px;
-    background-color: #eee;
-    border-radius: 4px;
-    text-align: center;
-    color: #666;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
 }
 
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #eee;
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    header {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .work-period {
+        margin-top: 5px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        padding: 0;
+        background: white;
+    }
+
+    .theme-toggle {
+        display: none;
+    }
+
+    section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: white;
+        box-shadow: none;
+    }
+
+    .experience-item {
+        box-shadow: none;
+        border: 1px solid #eee;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }
