@@ -204,4 +204,21 @@ footer {
         text-decoration: none;
         color: black;
     }
+
+    .section-bio {
+        margin: 20px 0 40px;
+        padding: 30px;
+        border-radius: 15px;
+        background-color: var(--bg-secondary);
+        box-shadow: 0 4px 6px var(--shadow);
+    }
+    
+    .bio-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+    }
 }
