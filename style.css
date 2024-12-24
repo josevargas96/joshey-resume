@@ -301,3 +301,49 @@ footer {
         font-size: 1.1rem;
     }
 }
+
+.section-hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+    transition: all 1s;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    position: sticky;
+    top: 20px;
+    z-index: 10;
+    background: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.experience-item {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s ease-out;
+}
+
+.experience-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.experience-item:nth-child(even) {
+    transform: translateX(100px);
+}
+
+/* Add transition delay for cascading effect */
+.experience-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.experience-item:nth-child(3) {
+    transition-delay: 0.4s;
+}
