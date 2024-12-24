@@ -154,42 +154,43 @@
         });
     </script>
     <script>
-        // Intersection Observer for sections
+        // Intersection Observer for sections and items
         const sectionObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('section-visible');
-                        // If this is an experience section, handle its items
-                        if (entry.target.classList.contains('section-experience')) {
-                            const items = entry.target.querySelectorAll('.experience-item');
-                            items.forEach(item => item.classList.add('visible'));
-                        }
-                    }
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-visible');
+                // Handle items within sections
+                const items = entry.target.querySelectorAll('.experience-item, .education-item');
+                items.forEach((item, index) => {
+                    // Add expanded class immediately
+                    item.classList.add('expanded');
                 });
-            },
-            {
-                root: null,
-                threshold: 0.15,
-            }
-        );
-        
-        // Add hidden class and observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('section-hidden');
-            sectionObserver.observe(section);
-        });
-        
-        // Add title wrapper to all sections
-        document.querySelectorAll('section').forEach(section => {
-            const title = section.querySelector('h2');
-            if (title) {
-                const wrapper = document.createElement('div');
-                wrapper.className = 'section-title';
-                title.parentNode.insertBefore(wrapper, title);
-                wrapper.appendChild(title);
             }
         });
+    },
+    {
+        root: null,
+        threshold: 0.15,
+    }
+);
+
+// Observe all sections
+document.querySelectorAll('section').forEach(section => {
+    section.classList.add('section-hidden');
+    sectionObserver.observe(section);
+});
+
+// Add title wrapper to all sections
+document.querySelectorAll('section').forEach(section => {
+    const title = section.querySelector('h2');
+    if (title) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'section-title';
+        title.parentNode.insertBefore(wrapper, title);
+        wrapper.appendChild(title);
+    }
+});
     </script>
 </body>
 </html>

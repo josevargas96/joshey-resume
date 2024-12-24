@@ -135,59 +135,38 @@ h2 {
     background: var(--bg-primary);
     border-radius: 12px;
     box-shadow: 0 2px 4px var(--shadow);
-    transition: transform 0.2s;
     position: relative;
     z-index: 1;
-    margin-top: 0; /* Reset margin for experience items */
+    
+    /* Animation properties */
+    opacity: 0;
+    transform: translateY(20px);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out,
+                max-height 0.6s ease-out,
+                opacity 0.6s ease-out;
 }
 
-.experience-item:hover {
-    transform: translateY(-2px);
+.experience-item.expanded {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px; /* Increased to ensure content fits */
+    margin-bottom: 2rem;
 }
 
+.experience-item.expanded:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow);
+    cursor: pointer; /* Optional: adds a pointer cursor on hover */
+}
+
+/* Remove any conflicting transform properties from other selectors */
 .experience-item.visible {
     opacity: 1;
-    transform: none;
+    /* Remove any transform properties here if they exist */
 }
 
-.experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.8rem;
-}
-
-.company-name {
-    color: var(--accent);
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.work-period {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-.job-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.3rem;
-    color: var(--text-primary);
-    font-weight: 600;
-}
-
-.achievements {
-    list-style-type: disc;
-    margin-left: 1.5rem;
-}
-
-.achievements li {
-    margin-bottom: 0.8rem;
-    line-height: 1.5;
-    color: var(--text-secondary);
-}
-
-/* Education styles */
 .education-item {
     padding: 1.5rem;
     background: var(--bg-primary);
@@ -292,6 +271,12 @@ footer {
 .section-visible {
     opacity: 1;
     transform: none;
+}
+
+/* Ensure proper spacing between items */
+.experience-item:not(:last-child),
+.education-item:not(:last-child) {
+    margin-bottom: 2rem;
 }
 
 /* Mobile responsiveness */
