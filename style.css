@@ -207,7 +207,29 @@ footer {
     padding: 30px;
     margin-top: 60px;
     border-top: 1px solid var(--border);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-link {
     color: var(--text-secondary);
+    font-size: 2rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.footer-cta {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
 }
 
 /* Mobile responsiveness */
