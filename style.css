@@ -37,6 +37,50 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Experience section styles */
+.experience-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.company-name {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.work-period {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.job-title {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.achievements {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.achievements li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    color: #555;
+}
+
 /* Placeholder styles */
 .placeholder {
     padding: 20px;
