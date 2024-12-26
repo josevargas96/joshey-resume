@@ -253,7 +253,6 @@ footer {
 }
 
 .bio-content {
-    max-width: 800px;
     margin: 0 auto;
     text-align: center;
     line-height: 1.8;
@@ -277,6 +276,60 @@ footer {
 .experience-item:not(:last-child),
 .education-item:not(:last-child) {
     margin-bottom: 2rem;
+}
+
+/* Role description styles */
+.role-description {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    border-left: 3px solid var(--accent);
+    font-style: italic;
+}
+
+/* Achievement list styles */
+.achievements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievements li {
+    position: relative;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.achievements li:hover {
+    transform: translateX(5px);
+    box-shadow: 2px 4px 8px var(--shadow);
+}
+
+.achievements li::before {
+    content: "→";
+    position: absolute;
+    left: 0.5rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Experience header refinements */
+.experience-header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.company-name {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
 }
 
 /* Mobile responsiveness */
