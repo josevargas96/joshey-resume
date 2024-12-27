@@ -19,4 +19,4 @@ To modify this resume:
 
 ## View the Resume
 
-You can view the live resume at: https://josevargas96.github.io/joshey-resume/
+You can view the live resume at: https://joshey.io
