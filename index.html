@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <title>Joshey's Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -170,9 +170,11 @@
                 entry.target.classList.add('section-visible');
                 // Handle items within sections
                 const items = entry.target.querySelectorAll('.experience-item, .education-item');
-                items.forEach((item, index) => {
-                    // Add expanded class immediately
-                    item.classList.add('expanded');
+                items.forEach((item) => {
+                    // Add expanded class with a small delay for mobile
+                    setTimeout(() => {
+                        item.classList.add('expanded');
+                    }, 100);
                 });
             }
         });

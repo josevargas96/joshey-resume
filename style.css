@@ -137,21 +137,20 @@ h2 {
     box-shadow: 0 2px 4px var(--shadow);
     position: relative;
     z-index: 1;
-    
-    /* Animation properties */
-    opacity: 0;
-    transform: translateY(20px);
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease-out,
-                max-height 0.6s ease-out,
-                opacity 0.6s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for desktop only */
+@media (min-width: 769px) {
+    .experience-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px var(--shadow);
+    }
 }
 
 .experience-item.expanded {
     opacity: 1;
-    transform: translateY(0);
-    max-height: 1000px; /* Increased to ensure content fits */
+    transform: none;
     margin-bottom: 2rem;
 }
 
@@ -332,8 +331,9 @@ footer {
     margin: 0.5rem 0;
 }
 
-/* Mobile responsiveness */
+/* Mobile styles */
 @media (max-width: 768px) {
+    /* Keep your existing mobile styles */
     body {
         padding: 15px;
     }
@@ -362,6 +362,47 @@ footer {
     .skill-tag {
         font-size: 0.8rem;
         padding: 0.4rem 0.8rem;
+    }
+
+    /* Experience specific mobile adjustments */
+    .experience-item {
+        margin: 1rem 0;
+        padding: 1rem;
+        transform: none !important; /* Disable any transform on mobile */
+    }
+
+    .experience-item.expanded {
+        opacity: 1;
+        transform: none !important;
+        max-height: none;  /* Remove fixed height restriction */
+        margin-bottom: 1.5rem;
+        overflow: visible;
+        height: auto;
+    }
+
+    .achievements li {
+        padding: 0.8rem 1rem 0.8rem 2rem;
+        margin: 0.8rem 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    section {
+        padding: 20px;
+        padding-top: 60px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .role-description {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .section-title {
+        position: -webkit-sticky;
+        position: sticky;
+        padding: 1rem;
     }
 }
 
