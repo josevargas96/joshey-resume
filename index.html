@@ -263,5 +263,56 @@ document.querySelectorAll('section').forEach(section => {
             });
         });
     </script>
+    <script>
+        // Track when users click on social media links
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                gtag('event', 'social_click', {
+                    'platform': e.target.closest('a').getAttribute('aria-label')
+                });
+            });
+        });
+
+        // Track theme toggles
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            gtag('event', 'theme_change', {
+                'theme': newTheme
+            });
+        });
+
+        // Track section visibility
+        const analyticsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.querySelector('h2')?.textContent?.toLowerCase() || 'unknown';
+                    gtag('event', 'section_view', {
+                        'section_name': sectionId
+                    });
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            analyticsObserver.observe(section);
+        });
+
+        // Track experience item expansions
+        document.querySelectorAll('.view-more-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.closest('.experience-item');
+                const company = item.querySelector('.company-name')?.textContent;
+                const position = item.querySelector('.job-title')?.textContent;
+                gtag('event', 'experience_expand', {
+                    'company': company,
+                    'position': position,
+                    'action': button.textContent === 'View More' ? 'expand' : 'collapse'
+                });
+            });
+        });
+    </script>
+</body>
 </body>
 </html>
