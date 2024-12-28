@@ -52,10 +52,11 @@
                     <ul class="achievements">
                         <li>Leading the rollout of a Provider Recommendation Service was definitely one of my biggest wins. Not only did it reduce costs by $150,000 annually, but it also boosted revenue by 5%—adding an extra $5.7M to our annual revenue.</li>
                         <li>Our team was known as the problem solver squad. I dove deep into customer journeys and process flows using Miro and other collaboration tools, turning those insights into solutions that actually made a difference. There's something really satisfying about seeing customer pain points transform into effective product solutions.</li>
-                        <li>I owned and managed quite a portfolio: 5 web applications spread across customer-facing, partner-facing, and internal tools. These apps were powered by 50+ backend/frontend services, using API integrations and asynchronous messaging architecture. Making sure data flowed smoothly between these services and Salesforce was crucial—and sometimes challenging!</li>
-                        <li>Managing these applications meant developing and maintaining their product roadmaps. I kept a steady stream of improvements and new features flowing, always making sure they aligned with our company strategy. The key was prioritizing based on impact and business goals, which taught me a lot about strategic decision-making.</li>
-                        <li>Another achievement that really stands out was improving how our teams worked together across 3 countries and 5 time zones (with up to 8 hours of difference!). I established clear communication practices that reduced downtime and made our developers happier. It really showed me how crucial good communication is when working with global teams.</li>
+                        <li class="hidden">I owned and managed quite a portfolio: 5 web applications spread across customer-facing, partner-facing, and internal tools. These apps were powered by 50+ backend/frontend services, using API integrations and asynchronous messaging architecture. Making sure data flowed smoothly between these services and Salesforce was crucial—and sometimes challenging!</li>
+                        <li class="hidden">Managing these applications meant developing and maintaining their product roadmaps. I kept a steady stream of improvements and new features flowing, always making sure they aligned with our company strategy. The key was prioritizing based on impact and business goals, which taught me a lot about strategic decision-making.</li>
+                        <li class="hidden">Another achievement that really stands out was improving how our teams worked together across 3 countries and 5 time zones (with up to 8 hours of difference!). I established clear communication practices that reduced downtime and made our developers happier. It really showed me how crucial good communication is when working with global teams.</li>
                     </ul>
+                    <button class="view-more-btn">View More</button>
                 </div>
             </div>
         
@@ -71,8 +72,9 @@
                     <ul class="achievements">
                         <li>The highlight of my time here? Without a doubt, it was leading the development of a unified payment platform that integrated multiple payment providers' APIs. Not only did this project improve our EBITDA by over $200,000 annually, but we also achieved an impressive 95% user adoption rate. This was the project that really propelled my career to the next level.</li>
                         <li>Building this payment platform was like getting a crash course in modern tech architecture. I got my hands dirty with APIs and microservices, while learning to lead cross-functional teams. Breaking down complex requirements into achievable sprints taught me the real value of agile methodologies—there's nothing quite like seeing a massive project come together sprint by sprint.</li>
-                        <li>And then there were the stakeholders—so many stakeholders! Managing relationships across different departments taught me the art of clear communication and the importance of keeping everyone aligned. Balancing technical implementation with business objectives was challenging, but it showed me how crucial it is to speak both languages fluently in product management.</li>
+                        <li class="hidden">And then there were the stakeholders—so many stakeholders! Managing relationships across different departments taught me the art of clear communication and the importance of keeping everyone aligned. Balancing technical implementation with business objectives was challenging, but it showed me how crucial it is to speak both languages fluently in product management.</li>
                     </ul>
+                    <button class="view-more-btn">View More</button>
                 </div>
             </div>
         
@@ -88,8 +90,9 @@
                     <ul class="achievements">
                         <li>I'm particularly proud of how I managed to reduce ERP issue resolution time from several days to just 1-2 days by developing strong troubleshooting skills and streamlining communication with our development team. Turning user frustrations into quick solutions became my specialty.</li>
                         <li>As I grew more comfortable with the technical aspects, I found myself naturally gravitating toward product work. I started helping our product manager gather requirements from different business units and collaborated with cross-functional teams to bring new features to life in Microsoft Dynamics NAV.</li>
-                        <li>As the bridge between our US ERP users and our development team in Berlin, I learned the art of translating user needs into technical solutions across time zones and cultures. This experience laid the foundation for my future in product management.</li>
+                        <li class="hidden">As the bridge between our US ERP users and our development team in Berlin, I learned the art of translating user needs into technical solutions across time zones and cultures. This experience laid the foundation for my future in product management.</li>
                     </ul>
+                    <button class="view-more-btn">View More</button>
                 </div>
             </div>
         </section>
@@ -112,7 +115,8 @@
                         <span class="skill-tag">SOQL</span>
                         <span class="skill-tag">HTML/CSS</span>
                         <span class="skill-tag">JavaScript Basics</span>
-                        <span class="skill-tag">RESTful Services</span>
+                        <span class="skill-tag hidden">RESTful Services</span>
+                        <span class="skill-tag toggle-skills">View More</span>
                     </div>
                 </div>
                 <div class="skills-category">
@@ -121,8 +125,9 @@
                         <span class="skill-tag">Agile Product Management</span>
                         <span class="skill-tag">Product Roadmap Development</span>
                         <span class="skill-tag">User Stories</span>
-                        <span class="skill-tag">Feature Prioritization</span>
-                        <span class="skill-tag">Stakeholder Management</span>
+                        <span class="skill-tag hidden">Feature Prioritization</span>
+                        <span class="skill-tag hidden">Stakeholder Management</span>
+                        <span class="skill-tag toggle-skills">View More</span>
                     </div>
                 </div>
                 <div class="skills-category">
@@ -131,8 +136,9 @@
                         <span class="skill-tag">Jira</span>
                         <span class="skill-tag">Miro</span>
                         <span class="skill-tag">Salesforce</span>
-                        <span class="skill-tag">Microsoft Dynamics NAV</span>
-                        <span class="skill-tag">Mixpanel</span>
+                        <span class="skill-tag hidden">Microsoft Dynamics NAV</span>
+                        <span class="skill-tag hidden">Mixpanel</span>
+                        <span class="skill-tag toggle-skills">View More</span>
                     </div>
                 </div>
             </div>
@@ -210,6 +216,52 @@ document.querySelectorAll('section').forEach(section => {
         wrapper.appendChild(title);
     }
 });
+    </script>
+    <script>
+        document.querySelectorAll('.view-more-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const achievements = this.previousElementSibling.querySelectorAll('li:not(:nth-child(1)):not(:nth-child(2))');
+                
+                achievements.forEach(item => {
+                    item.classList.toggle('hidden');
+                });
+                
+                const isExpanding = this.textContent === 'View More';
+                this.textContent = isExpanding ? 'View Less' : 'View More';
+                
+                // If we're collapsing, scroll back to the top of the role-info
+                if (!isExpanding) {
+                    // Get the sticky header height
+                    const stickyHeader = document.querySelector('.section-title');
+                    const headerHeight = stickyHeader ? stickyHeader.offsetHeight : 0;
+                    
+                    // Calculate the position to scroll to
+                    const buttonRect = this.getBoundingClientRect();
+                    const scrollPosition = window.pageYOffset + buttonRect.top - headerHeight - 20; // 20px extra padding
+                    
+                    // Smooth scroll to position
+                    window.scrollTo({
+                        top: scrollPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.toggle-skills').forEach(button => {
+            button.addEventListener('click', function() {
+                const skillsGrid = this.closest('.skills-grid');
+                const allSkills = skillsGrid.querySelectorAll('.skill-tag:not(.toggle-skills):not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3))');
+                const isExpanding = this.textContent === 'View More';
+                
+                allSkills.forEach(skill => {
+                    skill.classList.toggle('hidden');
+                });
+                
+                this.textContent = isExpanding ? 'View Less' : 'View More';
+            });
+        });
     </script>
 </body>
 </html>
