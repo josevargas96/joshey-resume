@@ -496,3 +496,28 @@ footer {
 .skills-grid .skill-tag.hidden {
     display: none;
 }
+
+/* What I'm Looking For section */
+.section-looking-for .looking-for-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-looking-for .looking-for-content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 1rem 1.5rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow);
+    border-left: 3px solid var(--accent);
+}
+
+/* Add a 4th column to the skills grid on larger screens */
+@media (min-width: 769px) {
+    .skills-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
