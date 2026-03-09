@@ -1,121 +1,211 @@
-/* Variables for theming */
+/* ============================================
+   VARIABLES
+   ============================================ */
 :root {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8f9fa;
-    --text-primary: #2d3436;
-    --text-secondary: #636e72;
-    --accent: #0984e3;
-    --border: #dfe6e9;
-    --shadow: rgba(0, 0, 0, 0.1);
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #111827;
+    --bg-card: #1a2236;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent: #00d4ff;
+    --accent-violet: #7c3aed;
+    --border: #1e293b;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --glow: rgba(0, 212, 255, 0.12);
 }
 
-[data-theme="dark"] {
-    --bg-primary: #2d3436;
-    --bg-secondary: #222;
-    --text-primary: #f8f9fa;
-    --text-secondary: #dfe6e9;
-    --accent: #74b9ff;
-    --border: #636e72;
-    --shadow: rgba(0, 0, 0, 0.3);
-}
-
-/* Base styles */
+/* ============================================
+   BASE
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    max-width: 1200px;
+    line-height: 1.7;
+    max-width: 860px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 24px 80px;
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    padding-top: 20px;  /* Added for sticky header spacing */
+    font-size: 1rem;
 }
 
-/* Theme toggle button */
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
-    cursor: pointer;
-    transition: transform 0.3s;
-    box-shadow: 0 2px 5px var(--shadow);
-    z-index: 1001;  /* Updated to be above sticky headers */
-}
-
-.theme-toggle:hover {
-    transform: scale(1.1);
-}
-
-/* Header styles */
+/* ============================================
+   HEADER
+   ============================================ */
 header {
     text-align: center;
-    padding: 60px 0;
-    background-color: var(--bg-secondary);
-    border-radius: 15px;
-    margin-bottom: 40px;
+    padding: 80px 0 60px;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-violet));
+    margin: 32px auto 0;
+    border-radius: 2px;
 }
 
 h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 15px;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
 }
 
-/* Section styles */
-section {
-    margin: 40px 0;
-    padding: 30px;
-    padding-top: 80px; /* Increased to accommodate sticky header */
-    border-radius: 15px;
-    background-color: var(--bg-secondary);
-    box-shadow: 0 4px 6px var(--shadow);
-    position: relative;
-    isolation: isolate;
-}
-
-/* Ensure content stays below sticky header */
-.section > *:not(.section-title) {
-    position: relative;
-    z-index: 1;
-    margin-top: 20px; /* Add spacing after the title */
-}
-
-h2 {
-    font-family: 'Poppins', sans-serif;
+header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 25px;
-    font-size: 1.8rem;
 }
 
-/* Section title styles */
+/* ============================================
+   STAT CARDS (Hero metrics)
+   ============================================ */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 48px 0;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-violet));
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px var(--glow);
+}
+
+.stat-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   BIO SECTION
+   ============================================ */
+.section-bio {
+    margin: 0 0 48px;
+    padding: 36px;
+    border-radius: 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+}
+
+.bio-content {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.bio-content p {
+    margin-bottom: 1.2rem;
+}
+
+.bio-content p:last-child {
+    margin-bottom: 0;
+}
+
+.bio-content strong {
+    color: var(--text-primary);
+}
+
+.bio-content em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+section {
+    margin: 0 0 48px;
+    padding: 36px;
+    border-radius: 16px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    position: relative;
+}
+
+.section-hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.section-visible {
+    opacity: 1;
+}
+
+/* ============================================
+   SECTION TITLES (sticky)
+   ============================================ */
 .section-title {
     position: sticky;
     top: 0;
-    z-index: 1000;
-    background-color: var(--bg-secondary); /* Changed to be fully opaque */
-    padding: 1.5rem;
-    margin: -80px -30px 30px -30px; /* Adjusted top margin to match new padding */
-    width: calc(100% + 60px);
-    box-shadow: 0 2px 8px var(--shadow);
+    z-index: 100;
+    background-color: var(--bg-secondary);
+    padding: 20px 36px;
+    margin: -36px -36px 32px -36px;
+    width: calc(100% + 72px);
     border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .section-title h2 {
@@ -123,172 +213,96 @@ h2 {
     padding: 0;
 }
 
-/* Experience section styles */
-.section-experience {
-    position: relative;
-    overflow: visible;
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    letter-spacing: -0.01em;
 }
 
+/* Accent dot before section titles */
+.section-title::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+    flex-shrink: 0;
+}
+
+/* ============================================
+   EXPERIENCE ITEMS
+   ============================================ */
 .experience-item {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: var(--bg-primary);
+    margin-bottom: 24px;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 12px;
-    box-shadow: 0 2px 4px var(--shadow);
-    position: relative;
-    z-index: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Add hover effect for desktop only */
-@media (min-width: 769px) {
-    .experience-item:hover {
-        transform: scale(1.02);
-        box-shadow: 0 8px 16px var(--shadow);
-    }
+.experience-item:hover {
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 4px 24px var(--glow);
 }
 
-.experience-item.expanded {
-    opacity: 1;
-    transform: none;
-    margin-bottom: 2rem;
+.experience-item:last-child {
+    margin-bottom: 0;
 }
 
-.experience-item.expanded:hover {
-    transform: scale(1.03) translateY(-5px);
-    box-shadow: 0 8px 16px var(--shadow);
-    cursor: pointer; /* Optional: adds a pointer cursor on hover */
-}
-
-/* Remove any conflicting transform properties from other selectors */
-.experience-item.visible {
-    opacity: 1;
-    /* Remove any transform properties here if they exist */
-}
-
-.education-item {
-    padding: 1.5rem;
-    background: var(--bg-primary);
-    border-radius: 12px;
-    box-shadow: 0 2px 4px var(--shadow);
-}
-
-.degree {
-    color: var(--accent);
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-}
-
-.education-period {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-/* Skills styles */
-.skills-wrapper {
-    display: grid;
-    gap: 2rem;
-}
-
-.skills-category h3 {
-    margin-bottom: 1rem;
-    color: var(--accent);
-}
-
-.skills-grid {
+.experience-header {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: 8px;
 }
 
-.skill-tag {
-    background: var(--bg-primary);
-    padding: 0.5rem 1rem;
+.job-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.work-period {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    padding: 3px 10px;
     border-radius: 20px;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    box-shadow: 0 2px 4px var(--shadow);
+    border: 1px solid var(--border);
+    white-space: nowrap;
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 30px;
-    margin-top: 60px;
-    border-top: 1px solid var(--border);
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.social-link {
-    color: var(--text-secondary);
-    font-size: 2rem;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.social-link:hover {
+.company-name {
     color: var(--accent);
-    transform: translateY(-3px);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 8px 0 4px;
+    letter-spacing: 0.02em;
 }
 
-.footer-cta {
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-/* Bio section */
-.section-bio {
-    margin: 20px 0 40px;
-    padding: 30px;
-    border-radius: 15px;
-    background-color: var(--bg-secondary);
-    box-shadow: 0 4px 6px var(--shadow);
-}
-
-.bio-content {
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-}
-
-/* Section transitions */
-.section-hidden {
-    opacity: 0;
-    transform: none;
-    transition: opacity 0.5s;
-}
-
-.section-visible {
-    opacity: 1;
-    transform: none;
-}
-
-/* Ensure proper spacing between items */
-.experience-item:not(:last-child),
-.education-item:not(:last-child) {
-    margin-bottom: 2rem;
-}
-
-/* Role description styles */
 .role-description {
     color: var(--text-secondary);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin: 1.5rem 0;
-    padding: 0 1rem;
-    border-left: 3px solid var(--accent);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin: 12px 0 16px;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent);
     font-style: italic;
 }
 
-/* Achievement list styles */
+/* ============================================
+   ACHIEVEMENT LIST
+   ============================================ */
 .achievements {
     list-style: none;
     padding: 0;
@@ -297,227 +311,265 @@ footer {
 
 .achievements li {
     position: relative;
-    padding: 1rem 1.5rem;
-    margin: 1rem 0;
-    background: var(--bg-primary);
+    padding: 10px 12px 10px 28px;
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
     border-radius: 8px;
-    box-shadow: 0 2px 4px var(--shadow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background 0.15s ease, color 0.15s ease;
 }
 
 .achievements li:hover {
-    transform: translateX(5px);
-    box-shadow: 2px 4px 8px var(--shadow);
+    background: rgba(0, 212, 255, 0.05);
+    color: var(--text-primary);
 }
 
 .achievements li::before {
     content: "→";
     position: absolute;
-    left: 0.5rem;
+    left: 8px;
     color: var(--accent);
     font-weight: bold;
+    font-size: 0.85rem;
 }
 
-/* Experience header refinements */
-.experience-header {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border);
-}
-
-.company-name {
-    color: var(--accent);
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    /* Keep your existing mobile styles */
-    body {
-        padding: 15px;
-    }
-
-    header {
-        padding: 40px 20px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .experience-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .work-period {
-        margin-top: 5px;
-    }
-
-    .skills-grid {
-        gap: 0.5rem;
-    }
-    
-    .skill-tag {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-    }
-
-    /* Experience specific mobile adjustments */
-    .experience-item {
-        margin: 1rem 0;
-        padding: 1rem;
-        transform: none !important; /* Disable any transform on mobile */
-    }
-
-    .experience-item.expanded {
-        opacity: 1;
-        transform: none !important;
-        max-height: none;  /* Remove fixed height restriction */
-        margin-bottom: 1.5rem;
-        overflow: visible;
-        height: auto;
-    }
-
-    .achievements li {
-        padding: 0.8rem 1rem 0.8rem 2rem;
-        margin: 0.8rem 0;
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    section {
-        padding: 20px;
-        padding-top: 60px;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .role-description {
-        font-size: 0.95rem;
-        padding: 0 0.5rem;
-        margin: 1rem 0;
-    }
-
-    .section-title {
-        position: -webkit-sticky;
-        position: sticky;
-        padding: 1rem;
-    }
-
-    .view-more-btn {
-        width: 100%;
-        padding: 0.8rem;
-    }
-}
-
-/* Print styles */
-@media print {
-    body {
-        padding: 0;
-        background: white;
-    }
-
-    .theme-toggle {
-        display: none;
-    }
-
-    section {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        background: white;
-        box-shadow: none;
-    }
-
-    .experience-item {
-        box-shadow: none;
-        border: 1px solid #eee;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-}
-
-/* Add these styles */
 .achievements li.hidden {
     display: none;
 }
 
+/* ============================================
+   VIEW MORE BUTTON
+   ============================================ */
 .view-more-btn {
-    background: var(--bg-secondary);
+    background: transparent;
     color: var(--accent);
-    border: 1px solid var(--accent);
-    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    padding: 8px 20px;
     border-radius: 20px;
     cursor: pointer;
-    margin: 1rem auto;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    margin: 16px auto 0;
+    font-size: 0.85rem;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.2s ease;
     display: block;
-    width: 95%;
+    width: 100%;
+    letter-spacing: 0.03em;
 }
 
 .view-more-btn:hover {
-    background: var(--accent);
-    color: var(--bg-secondary);
+    background: rgba(0, 212, 255, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 12px var(--glow);
 }
 
-/* Adjust width for desktop */
-@media (min-width: 769px) {
-    .view-more-btn {
-        width: 90%;
-    }
+/* ============================================
+   EDUCATION
+   ============================================ */
+.education-item {
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
 }
 
-/* Keep the full width for mobile */
-@media (max-width: 768px) {
-    .view-more-btn {
-        width: 100%;
-        padding: 0.8rem;
-    }
+.education-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
 }
 
-/* Add these to your existing skills styles */
-.toggle-skills {
-    cursor: pointer;
-    background: var(--bg-primary);
-    border: 1px dashed var(--accent);
+.degree {
     color: var(--accent);
+    font-size: 0.95rem;
+    margin: 4px 0;
 }
 
-.toggle-skills:hover {
-    background: var(--accent);
-    color: var(--bg-primary);
+.education-period {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
 }
 
-/* Ensure this style exists and is properly scoped */
-.skills-grid .skill-tag.hidden {
-    display: none;
-}
-
-/* What I'm Looking For section */
+/* ============================================
+   WHAT I'M LOOKING FOR
+   ============================================ */
 .section-looking-for .looking-for-content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 12px;
 }
 
 .section-looking-for .looking-for-content p {
     color: var(--text-secondary);
-    font-size: 1.1rem;
-    line-height: 1.8;
-    padding: 1rem 1.5rem;
-    background: var(--bg-primary);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    padding: 14px 16px 14px 20px;
+    background: var(--bg-card);
     border-radius: 8px;
-    box-shadow: 0 2px 4px var(--shadow);
-    border-left: 3px solid var(--accent);
+    border-left: 2px solid var(--accent);
+    transition: background 0.15s ease;
 }
 
-/* Add a 4th column to the skills grid on larger screens */
-@media (min-width: 769px) {
+.section-looking-for .looking-for-content p:hover {
+    background: rgba(0, 212, 255, 0.05);
+}
+
+/* ============================================
+   SKILLS
+   ============================================ */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.skills-category h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    transition: all 0.15s ease;
+}
+
+.skill-tag:hover {
+    border-color: rgba(0, 212, 255, 0.4);
+    color: var(--text-primary);
+    background: rgba(0, 212, 255, 0.07);
+}
+
+.skill-tag.hidden {
+    display: none;
+}
+
+.toggle-skills {
+    cursor: pointer;
+    border-style: dashed;
+    color: var(--accent);
+    border-color: rgba(0, 212, 255, 0.4);
+}
+
+.toggle-skills:hover {
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--accent);
+    box-shadow: 0 0 10px var(--glow);
+}
+
+@media (max-width: 640px) {
     .skills-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 48px 0 24px;
+    border-top: 1px solid var(--border);
+    margin-top: 16px;
+}
+
+.footer-cta {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.social-link {
+    color: var(--text-secondary);
+    font-size: 1.6rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 16px 60px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 24px 20px;
+    }
+
+    .section-title {
+        padding: 16px 20px;
+        margin: -24px -20px 24px -20px;
+        width: calc(100% + 40px);
+    }
+
+    .section-bio {
+        padding: 24px 20px;
+    }
+
+    .experience-item {
+        padding: 18px 16px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+    }
+
+    .view-more-btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* ============================================
+   PRINT
+   ============================================ */
+@media print {
+    body {
+        background: white;
+        color: black;
+        padding: 0;
+    }
+
+    section {
+        break-inside: avoid;
+        border: 1px solid #eee;
+        box-shadow: none;
     }
 }
