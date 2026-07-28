@@ -1,0 +1,7 @@
+name = "resume-chat"
+main = "src/index.ts"
+compatibility_date = "2026-07-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ANTHROPIC_API_KEY is set as an encrypted secret, not here:
+#   npx wrangler secret put ANTHROPIC_API_KEY

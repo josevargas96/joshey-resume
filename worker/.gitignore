@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+
+# wrangler writes local secrets here — must never be committed
+.dev.vars
+.dev.vars.*
