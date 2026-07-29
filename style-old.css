@@ -1,0 +1,575 @@
+/* ============================================
+   VARIABLES
+   ============================================ */
+:root {
+    --bg-primary: #0a0e1a;
+    --bg-secondary: #111827;
+    --bg-card: #1a2236;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent: #00d4ff;
+    --accent-violet: #7c3aed;
+    --border: #1e293b;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --glow: rgba(0, 212, 255, 0.12);
+}
+
+/* ============================================
+   BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    text-align: center;
+    padding: 80px 0 60px;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-violet));
+    margin: 32px auto 0;
+    border-radius: 2px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* ============================================
+   STAT CARDS (Hero metrics)
+   ============================================ */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 48px 0;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-violet));
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px var(--glow);
+}
+
+.stat-value {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   BIO SECTION
+   ============================================ */
+.section-bio {
+    margin: 0 0 48px;
+    padding: 36px;
+    border-radius: 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+}
+
+.bio-content {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.bio-content p {
+    margin-bottom: 1.2rem;
+}
+
+.bio-content p:last-child {
+    margin-bottom: 0;
+}
+
+.bio-content strong {
+    color: var(--text-primary);
+}
+
+.bio-content em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+section {
+    margin: 0 0 48px;
+    padding: 36px;
+    border-radius: 16px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    position: relative;
+}
+
+.section-hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.section-visible {
+    opacity: 1;
+}
+
+/* ============================================
+   SECTION TITLES (sticky)
+   ============================================ */
+.section-title {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg-secondary);
+    padding: 20px 36px;
+    margin: -36px -36px 32px -36px;
+    width: calc(100% + 72px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-title h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    letter-spacing: -0.01em;
+}
+
+/* Accent dot before section titles */
+.section-title::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+    flex-shrink: 0;
+}
+
+/* ============================================
+   EXPERIENCE ITEMS
+   ============================================ */
+.experience-item {
+    margin-bottom: 24px;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-item:hover {
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 4px 24px var(--glow);
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.job-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.work-period {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.company-name {
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 8px 0 4px;
+    letter-spacing: 0.02em;
+}
+
+.role-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin: 12px 0 16px;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent);
+    font-style: italic;
+}
+
+/* ============================================
+   ACHIEVEMENT LIST
+   ============================================ */
+.achievements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievements li {
+    position: relative;
+    padding: 10px 12px 10px 28px;
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    border-radius: 8px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.achievements li:hover {
+    background: rgba(0, 212, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.achievements li::before {
+    content: "→";
+    position: absolute;
+    left: 8px;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.achievements li.hidden {
+    display: none;
+}
+
+/* ============================================
+   VIEW MORE BUTTON
+   ============================================ */
+.view-more-btn {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 16px auto 0;
+    font-size: 0.85rem;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.2s ease;
+    display: block;
+    width: 100%;
+    letter-spacing: 0.03em;
+}
+
+.view-more-btn:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 12px var(--glow);
+}
+
+/* ============================================
+   EDUCATION
+   ============================================ */
+.education-item {
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.education-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.degree {
+    color: var(--accent);
+    font-size: 0.95rem;
+    margin: 4px 0;
+}
+
+.education-period {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   WHAT I'M LOOKING FOR
+   ============================================ */
+.section-looking-for .looking-for-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-looking-for .looking-for-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    padding: 14px 16px 14px 20px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    border-left: 2px solid var(--accent);
+    transition: background 0.15s ease;
+}
+
+.section-looking-for .looking-for-content p:hover {
+    background: rgba(0, 212, 255, 0.05);
+}
+
+/* ============================================
+   SKILLS
+   ============================================ */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.skills-category h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    transition: all 0.15s ease;
+}
+
+.skill-tag:hover {
+    border-color: rgba(0, 212, 255, 0.4);
+    color: var(--text-primary);
+    background: rgba(0, 212, 255, 0.07);
+}
+
+.skill-tag.hidden {
+    display: none;
+}
+
+.toggle-skills {
+    cursor: pointer;
+    border-style: dashed;
+    color: var(--accent);
+    border-color: rgba(0, 212, 255, 0.4);
+}
+
+.toggle-skills:hover {
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--accent);
+    box-shadow: 0 0 10px var(--glow);
+}
+
+@media (max-width: 640px) {
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 48px 0 24px;
+    border-top: 1px solid var(--border);
+    margin-top: 16px;
+}
+
+.footer-cta {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.social-link {
+    color: var(--text-secondary);
+    font-size: 1.6rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 16px 60px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 24px 20px;
+    }
+
+    .section-title {
+        padding: 16px 20px;
+        margin: -24px -20px 24px -20px;
+        width: calc(100% + 40px);
+    }
+
+    .section-bio {
+        padding: 24px 20px;
+    }
+
+    .experience-item {
+        padding: 18px 16px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+    }
+
+    .view-more-btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* ============================================
+   PRINT
+   ============================================ */
+@media print {
+    body {
+        background: white;
+        color: black;
+        padding: 0;
+    }
+
+    section {
+        break-inside: avoid;
+        border: 1px solid #eee;
+        box-shadow: none;
+    }
+}
