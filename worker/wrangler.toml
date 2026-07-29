@@ -3,5 +3,10 @@ main = "src/index.ts"
 compatibility_date = "2026-07-01"
 compatibility_flags = ["nodejs_compat"]
 
-# ANTHROPIC_API_KEY is set as an encrypted secret, not here:
-#   npx wrangler secret put ANTHROPIC_API_KEY
+[vars]
+# OpenRouter model slug. Swap this to change models (e.g. "anthropic/claude-sonnet-5")
+# without touching src/index.ts, then `npx wrangler deploy` again.
+MODEL = "anthropic/claude-sonnet-5"
+
+# OPENROUTER_API_KEY is set as an encrypted secret, not here:
+#   npx wrangler secret put OPENROUTER_API_KEY

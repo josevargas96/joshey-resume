@@ -1,7 +1,6 @@
-import Anthropic from '@anthropic-ai/sdk';
-
 export interface Env {
-  ANTHROPIC_API_KEY: string;
+  OPENROUTER_API_KEY: string;
+  MODEL: string;
 }
 
 /** Origins allowed to call this Worker. Add localhost while developing. */
@@ -180,21 +179,36 @@ export default {
       return json({ error: 'Expected a trailing user message' }, 400, origin);
     }
 
-    const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
-
     try {
-      const response = await client.messages.create({
-        model: 'claude-opus-5',
-        max_tokens: 1024,
-        // No tools and short factual answers — skip thinking for latency.
-        // Allowed on Opus 5 at effort "high" or below.
-        thinking: { type: 'disabled' },
-        output_config: { effort: 'low' },
-        system: [{ type: 'text', text: SYSTEM, cache_control: { type: 'ephemeral' } }],
-        messages,
+      const upstream = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${env.OPENROUTER_API_KEY}`,
+          'Content-Type': 'application/json',
+          'HTTP-Referer': 'https://joshey.io',
+          'X-Title': 'joshey.io resume chat',
+        },
+        body: JSON.stringify({
+          model: env.MODEL,
+          max_tokens: 1024,
+          messages: [{ role: 'system', content: SYSTEM }, ...messages],
+        }),
       });
 
-      if (response.stop_reason === 'refusal') {
+      if (upstream.status === 429) {
+        return json({ error: 'Busy right now — try again in a moment.' }, 429, origin);
+      }
+      if (!upstream.ok) {
+        console.error('openrouter error', upstream.status, await upstream.text());
+        return json({ error: 'Upstream error' }, 502, origin);
+      }
+
+      const data = (await upstream.json()) as {
+        choices?: Array<{ finish_reason?: string; message?: { content?: string } }>;
+      };
+      const choice = data.choices?.[0];
+
+      if (choice?.finish_reason === 'content_filter') {
         return json(
           { reply: "I can't answer that one. Email Jose at josheyvargas@icloud.com." },
           200,
@@ -202,18 +216,10 @@ export default {
         );
       }
 
-      const reply = response.content
-        .filter((b): b is Anthropic.TextBlock => b.type === 'text')
-        .map((b) => b.text)
-        .join('')
-        .trim();
-
+      const reply = (choice?.message?.content ?? '').trim();
       return json({ reply }, 200, origin);
     } catch (err) {
-      if (err instanceof Anthropic.RateLimitError) {
-        return json({ error: 'Busy right now — try again in a moment.' }, 429, origin);
-      }
-      console.error('anthropic error', err);
+      console.error('openrouter error', err);
       return json({ error: 'Upstream error' }, 502, origin);
     }
   },

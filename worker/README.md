@@ -2,14 +2,14 @@
 
 Cloudflare Worker that powers the "Ask about my work" section on joshey.io.
 
-It holds the Anthropic API key server-side (GitHub Pages is static, so the key can
+It holds an OpenRouter API key server-side (GitHub Pages is static, so the key can
 never live in the page) and answers questions using only the resume text embedded in
 `src/index.ts`.
 
 ## Deploy
 
-You need a Cloudflare account (free tier is plenty) and an Anthropic API key from
-https://console.anthropic.com.
+You need a Cloudflare account (free tier is plenty) and an OpenRouter API key from
+https://openrouter.ai/keys.
 
 ```bash
 cd worker
@@ -19,7 +19,7 @@ npm install
 npx wrangler login
 
 # Store the API key as an encrypted secret (never goes in a file)
-npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put OPENROUTER_API_KEY
 # paste the key when prompted
 
 npx wrangler deploy
@@ -49,18 +49,21 @@ python3 -m http.server 8000   # from the repo root, serves the site
 inventing anything outside it, so if you add a job or a number to the site, add it
 here too or the chat won't know about it. Redeploy with `npx wrangler deploy`.
 
+## Changing the model
+
+The model is an OpenRouter slug set in `wrangler.toml` under `[vars] MODEL`, not
+hardcoded in `src/index.ts`. To swap models (e.g. from `anthropic/claude-opus-5` to
+`anthropic/claude-sonnet-5`, or a different provider entirely), edit that value and
+run `npx wrangler deploy` — no code changes needed. Browse available models and
+pricing at https://openrouter.ai/models.
+
 ## Cost
 
-Runs on `claude-opus-5` with thinking disabled and `effort: "low"` — short factual
-answers with no tool use, so latency stays low. The resume system prompt is cached
-(`cache_control: ephemeral`), so repeat questions within the cache window read the
-prompt at ~10% of input cost.
+Routes through OpenRouter, which adds a small margin on top of the underlying
+provider's per-token price. Pricing depends entirely on which `MODEL` is configured —
+check the model's page on openrouter.ai/models for current rates.
 
-Rough order of magnitude: a few thousand questions costs single-digit dollars.
 Cloudflare Workers' free tier covers 100,000 requests/day.
-
-To cut cost further, swap the model to `claude-haiku-4-5` in `src/index.ts` — quality
-drops somewhat but it's roughly 5x cheaper on input and output.
 
 ## Security notes
 
