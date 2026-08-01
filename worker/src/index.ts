@@ -22,16 +22,20 @@ Contact: josheyvargas@icloud.com
 LinkedIn: linkedin.com/in/jose-vargas-851703151 · GitHub: github.com/josevargas96
 
 SUMMARY
-5+ years building digital products that directly drive revenue. Background sits at
-the intersection of payments, healthcare technology, and AI-powered product
-development. Technical enough to work closely with engineers, data-driven enough to
-build his own dashboards, business-minded enough to tie decisions to outcomes.
+5+ years building digital products that directly drive revenue. The common thread across
+his work is friction in moments that matter: a payment that has to clear, a customer who
+needs the right provider, a note that has to get written down correctly. He builds the
+layer that removes that friction, whether it's a payments API, a matching engine, or an
+LLM listening in on an appointment. Pulls his own data from Snowflake and builds his own
+Domo dashboards rather than waiting on someone else's answer; that habit is how PRS
+started, having noticed the routing problem in the data before anyone asked him to fix it.
 
 HEADLINE NUMBERS
 - $5.7M additional annual revenue contributed
 - $150,000/year operational cost reduction
-- $200,000/year EBITDA improvement
+- ~3,900 provider hours saved annually (AI note transcription)
 - ~83 provider hours freed per week across the provider network
+- $200,000/year EBITDA improvement
 - 5 web applications owned
 
 EXPERIENCE
@@ -48,14 +52,24 @@ connected through API integrations and asynchronous messaging architecture.
 - Extended the PRS with a performance scoring mechanism prioritizing high-converting
   providers (higher closing rates, lower return rates), optimizing appointment routing
   and reducing wasted capacity for internal salaried providers.
-- Partnered on a cross-regional rebuild of the legacy telehealth platform, owning the
-  US market adaptation. Contributed to a ~40% reduction in average appointment duration
-  (75 → 45 minutes) and ~83 provider hours freed weekly.
-- Identified manual clinical note-writing as a top provider time drain and defined the
-  product strategy for an AI transcription pipeline using LLMs to auto-generate outcome
-  notes. Saves ~5 min per appointment across ~180 daily appointments (~3,900 provider
-  hours/year) and established the company's first data layer for provider coaching and
-  return-rate reduction.
+- Two years on, the PRS matching logic is still the foundation: another team built on it
+  in 2026 to launch fully automated voice AI agents that call previously uncalled leads
+  and schedule appointments with no human in the loop. Over the trailing 90 days that has
+  generated ~$2.0M in net booked revenue, adjusted for expected returns.
+- Owned the US market adaptation of a cross-regional rebuild of the legacy telehealth
+  platform, which wasn't built for how North American providers actually worked.
+  Providers self-reported appointment averages of 60–70 minutes, with a meaningful share
+  past 75, and performance broke down on slow connections. Applied direct provider
+  relationships and pain-point knowledge to map the new platform to North American
+  workflows rather than porting the old one over. Average appointment time has roughly
+  halved to 33–36 minutes, the outlier ceiling dropped from 75 to 45 minutes, and ~83
+  provider hours were freed weekly. Still trending down.
+- Identified manual clinical note-writing as a top provider time drain (~5 minutes after
+  every appointment across ~180 appointments a day, with none of that data structured).
+  Defined the product strategy for an LLM-powered transcription pipeline built on Zoom
+  RTMS that auto-generates outcome notes directly from the appointment. Saves ~3,900
+  provider hours/year and created the company's first structured data layer for provider
+  coaching and return-rate reduction.
 - Owned API integrations and async messaging architecture across all applications,
   including Salesforce CRM integration.
 - Built and maintained Snowflake-connected datasets and SQL queries in Domo to power
@@ -89,14 +103,17 @@ EDUCATION
 Florida International University — Bachelor of Business Administration, Finance (2018–2021)
 
 WHAT HE'S LOOKING FOR
-A PM role at a product-first company where features directly drive revenue, surrounded by
-experienced product people to learn from. Target industries: fintech and payments, crypto
-and blockchain, music and live events. Long-term goal: CPO role or founding his own
-company. Based in Denver, open to remote, would like to relocate to New York City.
+A PM role where he owns outcomes end to end, the way PRS became infrastructure another
+team is still building on two years later. Wants somewhere that compounds like that,
+around product people sharp enough to teach him things he doesn't know yet. Target
+industries: fintech and payments, crypto and blockchain, music and live events. These are
+industries where the product decision shows up directly in a transaction. Long-term goal:
+CPO role or founding his own company. Based in Denver, open to remote, would like to
+relocate to New York City.
 
 SKILLS
 Product: agile product management, roadmap development, backlog management, feature
-prioritization, user research & interviews, customer journey mapping, feature flagging &
+prioritization (Weighted Scoring, Value vs. Effort), user research & interviews, customer journey mapping, feature flagging &
 phased rollouts, stakeholder management.
 Technical: API integration & microservices, SQL (Snowflake), async messaging (Pulsar),
 Auth0 (user & M2M), LaunchDarkly, HTML/CSS/JavaScript, TypeScript/Node.js (read-level), Git.
