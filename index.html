@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Jose Vargas — Product Manager</title>
-<meta name="description" content="Jose Vargas is a Product Manager in Denver who builds products that move revenue — payments, telehealth, and AI-powered workflows. Currently leading telehealth product for North America at hear.com.">
+<meta name="description" content="Jose Vargas is a Product Manager in Denver who builds products that move revenue: payments, telehealth, and AI-powered workflows. Currently leading telehealth product for North America at hear.com.">
 
 <meta property="og:title" content="Jose Vargas — Product Manager">
 <meta property="og:description" content="I build products that move revenue. Payments, telehealth, and AI-powered workflows.">
@@ -32,7 +32,7 @@
   <div>
     <span class="status">Open to PM roles</span>
     <h1>Jose<br>Vargas</h1>
-    <p class="thesis">I build products that <em>move revenue</em> — payments, telehealth, and AI-powered workflows.</p>
+    <p class="thesis">I build products that <em>move revenue</em>. Payments, telehealth, and AI-powered workflows.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:josheyvargas@icloud.com">Get in touch</a>
       <a class="btn btn-ghost" href="#work">See the work</a>
@@ -55,7 +55,7 @@
   <div class="metrics reveal">
     <div class="metric"><span class="n">$5.7M</span><span class="l">Annual revenue<br>contributed</span></div>
     <div class="metric"><span class="n">83 hrs</span><span class="l">Provider hours<br>freed weekly</span></div>
-    <div class="metric"><span class="n">$350K</span><span class="l">Annual cost +<br>EBITDA impact</span></div>
+    <div class="metric"><span class="n">3,900 hrs</span><span class="l">Provider hours<br>saved annually</span></div>
     <div class="metric"><span class="n">5</span><span class="l">Web apps<br>owned</span></div>
   </div>
 </div>
@@ -69,8 +69,9 @@
   </div>
   <p>There's this idea that a resume should fit on one page. Squeezing your experience, your impact, and your personality into a single sheet sounds like a recipe for leaving out the best parts. So I built this instead.</p>
   <p>I'm a Product Manager with 5+ years building digital products that directly drive revenue. Today I lead the telehealth product for North America at <strong>hear.com</strong>, owning the full lifecycle across five web applications and a cross-functional team of seven.</p>
-  <p>My background sits at the intersection of payments, healthcare technology, and AI-powered product development. I'm technical enough to work closely with engineers, data-driven enough to build my own dashboards, and business-minded enough to connect every decision to an outcome that matters.</p>
-  <p>Outside of healthcare I follow fintech, crypto and blockchain, and the music and live events space closely — industries where I think some of the most interesting product problems are being solved right now.</p>
+  <p>The common thread across my work is friction in moments that actually matter: a payment that has to clear, a customer who needs the right provider, a note that has to get written down correctly. I build the layer that removes that friction, whether it's a payments API, a matching engine, or an LLM listening in on an appointment.</p>
+  <p>I pull my own data from Snowflake and build my own Domo dashboards because I don't like waiting for someone else's answer to my question. That habit is also how PRS started. I noticed the routing problem in the data before anyone asked me to fix it.</p>
+  <p>Outside of healthcare I follow fintech, crypto and blockchain, and the music and live events space closely. These are industries where the product decision shows up directly in a transaction: get it wrong, and you don't just lose a click, you lose the sale.</p>
 </section>
 
 <!-- ============================ WORK ============================ -->
@@ -89,33 +90,77 @@
       <span class="when">Jan 2024 — Present</span>
     </div>
     <div class="case-body">
-      <h3>Matching customers to the right provider, automatically</h3>
+      <div class="study">
+        <h3>Matching customers to the right provider, automatically</h3>
 
-      <div class="beat">
-        <span class="eyebrow">Problem</span>
-        <p>Appointment scheduling assigned customers to whoever was free. Providers with the wrong capability profile got booked anyway, capacity sat idle, and conversion suffered — a cost problem and a revenue problem wearing the same hat.</p>
-      </div>
-      <div class="beat">
-        <span class="eyebrow">Decision</span>
-        <p>I defined the solution architecture for a Provider Recommendation Service that matched customers to providers on availability <em>and</em> capability, then drove full-cycle delivery with my engineering team. Once it shipped, I extended it with a performance scoring layer that prioritized providers with higher closing rates and lower return rates.</p>
-      </div>
-      <div class="beat">
-        <span class="eyebrow">Outcome</span>
-        <p>Routing stopped being a coin flip. Wasted capacity on salaried providers dropped, and the revenue impact was the largest single contribution of my career so far.</p>
+        <div class="beat">
+          <span class="eyebrow">Problem</span>
+          <p>Appointment scheduling assigned customers to whoever was free. Providers with the wrong capability profile got booked anyway, capacity sat idle, and conversion suffered: a cost problem and a revenue problem wearing the same hat.</p>
+        </div>
+        <div class="beat">
+          <span class="eyebrow">Decision</span>
+          <p>I defined the solution architecture for a Provider Recommendation Service that matched customers to providers on availability <em>and</em> capability, then drove full-cycle delivery with my engineering team. Once it shipped, I extended it with a performance scoring layer that prioritized providers with higher closing rates and lower return rates.</p>
+        </div>
+        <div class="beat">
+          <span class="eyebrow">Outcome</span>
+          <p>Routing stopped being a coin flip. Wasted capacity on salaried providers dropped, and the revenue impact was the largest single contribution of my career so far. Two years on, the matching logic is still the foundation: another team built on it this year to launch fully automated voice AI agents that call previously uncalled leads and schedule appointments with no human in the loop. Over the trailing 90 days, that's generated ~$2.0M in net booked revenue, adjusted for expected returns.</p>
+        </div>
+
+        <div class="result">
+          <span class="chip">+$5.7M annual revenue</span>
+          <span class="chip">−$150K annual cost</span>
+        </div>
       </div>
 
-      <div class="result">
-        <span class="chip">+$5.7M annual revenue</span>
-        <span class="chip">−$150K annual cost</span>
+      <div class="study">
+        <h3>AI-powered clinical note transcription</h3>
+
+        <div class="beat">
+          <span class="eyebrow">Problem</span>
+          <p>Providers were writing outcome notes by hand after every appointment, roughly 5 minutes each across ~180 appointments a day. It was the single biggest time drain outside the appointment itself, and none of that data was structured or usable for anything beyond the note.</p>
+        </div>
+        <div class="beat">
+          <span class="eyebrow">Decision</span>
+          <p>I defined the product strategy for an LLM-powered transcription pipeline built on Zoom RTMS, auto-generating outcome notes directly from the appointment.</p>
+        </div>
+        <div class="beat">
+          <span class="eyebrow">Outcome</span>
+          <p>~3,900 provider hours saved annually, and it created something that didn't exist before: the company's first structured data layer for provider coaching.</p>
+        </div>
+
+        <div class="result">
+          <span class="chip">3,900 hrs saved annually</span>
+          <span class="chip">New coaching data layer</span>
+        </div>
       </div>
 
-      <button class="more" aria-expanded="false" aria-controls="also-1">Also in this role</button>
-      <ul class="also" id="also-1" hidden>
-        <li>Owned the US market adaptation of a ground-up telehealth platform rebuild, mapping the new platform to North American provider workflows — contributing to a ~40% reduction in average appointment duration (75 → 45 min) and ~83 provider hours freed weekly across the network.</li>
-        <li>Identified manual clinical note-writing as a top provider time drain and defined the product strategy for an LLM-powered transcription pipeline that auto-generates outcome notes — saving ~5 min across ~180 daily appointments (~3,900 provider hours/year) and establishing the company's first data layer for provider coaching.</li>
-        <li>Owned API integrations and asynchronous messaging architecture across all five applications, including Salesforce CRM integration.</li>
-        <li>Built and maintained Snowflake-connected datasets and SQL queries in Domo to power KPI dashboards; used Mixpanel, LogRocket, and New Relic for behavior analysis and system monitoring.</li>
-      </ul>
+      <div class="study">
+        <h3>Telehealth platform rebuild</h3>
+
+        <div class="beat">
+          <span class="eyebrow">Problem</span>
+          <p>The legacy platform wasn't built for how North American providers actually worked. Appointments ran long. Providers self-reported averages in the 60-70 minute range, with a meaningful share pushing past 75, and performance broke down for anyone on a slow connection. It was a platform designed elsewhere, retrofitted for a market it didn't fit.</p>
+        </div>
+        <div class="beat">
+          <span class="eyebrow">Decision</span>
+          <p>I owned the US market adaptation of a cross-regional rebuild, applying direct provider relationships and pain-point knowledge to map the new platform to North American workflows, not just porting the old one over.</p>
+        </div>
+        <div class="beat">
+          <span class="eyebrow">Outcome</span>
+          <p>Average appointment time has roughly halved to 33-36 minutes, and the outlier ceiling dropped from 75 minutes to 45. It's still trending down as we keep shipping.</p>
+        </div>
+
+        <div class="result">
+          <span class="chip">~50% reduction in appointment time</span>
+          <span class="chip">83 hrs freed weekly</span>
+        </div>
+
+        <button class="more" aria-expanded="false" aria-controls="also-1">Also in this role</button>
+        <ul class="also" id="also-1" hidden>
+          <li>Owned API integrations and asynchronous messaging architecture across all five applications, including Salesforce CRM integration.</li>
+          <li>Built and maintained Snowflake-connected datasets and SQL queries in Domo to power KPI dashboards; used Mixpanel, LogRocket, and New Relic for behavior analysis and system monitoring.</li>
+        </ul>
+      </div>
     </div>
   </article>
 
@@ -128,6 +173,13 @@
       <span class="when">Jan 2022 — Dec 2023</span>
     </div>
     <div class="case-body">
+      <div class="beat">
+        <p>Built a unified payment platform across Stripe and Allegro, improving EBITDA by $200K annually with 95% adoption.</p>
+      </div>
+
+      <button class="more" aria-expanded="false" aria-controls="also-2">Also in this role</button>
+
+      <div class="expand" id="also-2" hidden>
       <h3>One payment platform instead of four manual processes</h3>
 
       <div class="beat">
@@ -140,7 +192,7 @@
       </div>
       <div class="beat">
         <span class="eyebrow">Outcome</span>
-        <p>Adoption hit 95% — the number I care most about here, because a payments tool nobody uses is just a second patchwork.</p>
+        <p>Adoption hit 95%, the number I care most about here, because a payments tool nobody uses is just a second patchwork.</p>
       </div>
 
       <div class="result">
@@ -149,11 +201,11 @@
         <span class="chip">95% adoption</span>
       </div>
 
-      <button class="more" aria-expanded="false" aria-controls="also-2">Also in this role</button>
-      <ul class="also" id="also-2" hidden>
+      <ul class="also">
         <li>Orchestrated cross-functional teams across multiple simultaneous projects, implementing agile practices and breaking complex requirements into achievable sprints.</li>
         <li>Managed stakeholder relationships across technical and business teams, keeping implementation aligned to business objectives.</li>
       </ul>
+      </div>
     </div>
   </article>
 
@@ -166,6 +218,13 @@
       <span class="when">Nov 2020 — Jan 2022</span>
     </div>
     <div class="case-body">
+      <div class="beat">
+        <p>Cut ERP issue resolution time from several days to 1-2 days, my first experience bridging business needs and engineering execution.</p>
+      </div>
+
+      <button class="more" aria-expanded="false" aria-controls="also-3">Also in this role</button>
+
+      <div class="expand" id="also-3" hidden>
       <h3>Where I learned to translate between users and engineers</h3>
 
       <div class="beat">
@@ -183,6 +242,7 @@
 
       <div class="result">
         <span class="chip">Days → 1–2 days to resolve</span>
+      </div>
       </div>
     </div>
   </article>
@@ -223,7 +283,7 @@
   <div class="want">
     <div class="want-col">
       <h3>The role</h3>
-      <p>A PM role at a product-first company, where features directly drive revenue and I'm surrounded by experienced product people I can learn from.</p>
+      <p>A PM role where I own outcomes end to end, the way PRS became infrastructure another team is still building on two years later. I want to be somewhere that compounds like that, around product people sharp enough to teach me things I don't know yet.</p>
     </div>
     <div class="want-col">
       <h3>The industries</h3>
@@ -245,7 +305,7 @@
   <div class="skills">
     <div class="skill-group">
       <h3>Product</h3>
-      <p>Agile product management · Roadmap development · Backlog management · Feature prioritization · User research &amp; interviews · Customer journey mapping · Feature flagging &amp; phased rollouts · Stakeholder management</p>
+      <p>Agile product management · Roadmap development · Backlog management · Feature prioritization (Weighted Scoring, Value vs. Effort) · User research &amp; interviews · Customer journey mapping · Feature flagging &amp; phased rollouts · Stakeholder management</p>
     </div>
     <div class="skill-group">
       <h3>Technical</h3>
@@ -317,15 +377,22 @@ if ('IntersectionObserver' in window) {
   reveals.forEach(el => el.classList.add('in'));
 }
 
-/* ---------- expand "also in this role" ---------- */
+/* ---------- expand "also in this role" ----------
+   Panels are either an extra-bullets list or a full case study; both just
+   toggle [hidden], so one handler covers every .more button on the page. */
 document.querySelectorAll('.more').forEach(btn => {
+  const label = btn.dataset.label || 'Also in this role';
   btn.addEventListener('click', () => {
-    const list = document.getElementById(btn.getAttribute('aria-controls'));
-    const open = !list.hidden;
-    list.hidden = open;
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    const open = !panel.hidden;
+    panel.hidden = open;
     btn.setAttribute('aria-expanded', String(!open));
-    btn.textContent = open ? 'Also in this role' : 'Show less';
-    gtag('event', 'role_expand', { role: btn.closest('.case').querySelector('.role').textContent, action: open ? 'collapse' : 'expand' });
+    btn.textContent = open ? label : 'Show less';
+    // Revealed blocks were never visible to the observer, so mark them in
+    // directly — otherwise they'd unhide at opacity 0 and stay there.
+    if (!open) panel.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in'));
+    const source = btn.dataset.label || btn.closest('.case').querySelector('.role').textContent;
+    gtag('event', 'role_expand', { role: source, action: open ? 'collapse' : 'expand' });
   });
 });
 
@@ -375,7 +442,7 @@ async function ask(question) {
   sendBtn.disabled = true;
 
   if (!CHAT_ENDPOINT) {
-    bubble('Jose', "The chat isn't wired up yet — but I'd genuinely rather hear from you directly. Email me at josheyvargas@icloud.com.");
+    bubble('Jose', "The chat isn't wired up yet, but I'd genuinely rather hear from you directly. Email me at josheyvargas@icloud.com.");
     sendBtn.disabled = false;
     return;
   }

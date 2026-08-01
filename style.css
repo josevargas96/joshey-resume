@@ -290,6 +290,18 @@ section { padding: 84px 0; }
     max-width: 26ch;
 }
 
+/* Multiple case studies stack inside one role block — separate them with the
+   same hairline rhythm used between roles, one step lighter. */
+.study + .study {
+    margin-top: 44px;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+}
+/* Roles that lead with a one-line peek keep the full case study in here. */
+.expand { margin-top: 26px; }
+.expand[hidden] { display: none; }
+.expand .also { margin-top: 24px; }
+
 .beat { margin-bottom: 20px; max-width: var(--measure); }
 .beat > .eyebrow { display: block; margin-bottom: 5px; }
 .beat p { color: var(--ink-soft); line-height: 1.68; }
@@ -564,6 +576,8 @@ footer {
     .metric:first-child { padding-left: 20px; border-left: none; }
     .metric:nth-child(3) { border-left: none; padding-left: 20px; }
     .metric:nth-child(3), .metric:nth-child(4) { border-top: 1px solid var(--rule); }
+    /* the longer result chips overflow the viewport if held on one line */
+    .chip { white-space: normal; }
     .skills { grid-template-columns: 1fr; }
     .foot-grid { grid-template-columns: 1fr; align-items: start; }
     .section-head { flex-wrap: wrap; gap: 8px; }
@@ -577,6 +591,6 @@ footer {
 @media print {
     :root { --paper: #fff; --paper-alt: #fff; --ink: #000; --ink-soft: #333; --rule: #ccc; --accent: #000; --accent-tint: #eee; }
     .ask, .cta-row, .status, .more { display: none; }
-    .also[hidden] { display: block !important; }
+    .also[hidden], .expand[hidden] { display: block !important; }
     section { padding: 24px 0; break-inside: avoid; }
 }
