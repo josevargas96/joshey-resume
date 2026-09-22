@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-22T03:13:24Z",
+  "title": "Design System: Jose Vargas — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Burnt Vermilion",
+        "canonical": "#B33A15",
+        "tonalRamp": [
+          "#3D1407",
+          "#5C1F0B",
+          "#7A2A0E",
+          "#B33A15",
+          "#D65A2E",
+          "#E88259",
+          "#F3B79C",
+          "#FBE1D4"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Warm Ink Faint",
+        "canonical": "#6E6458",
+        "tonalRamp": [
+          "#17130F",
+          "#2E2822",
+          "#4A423A",
+          "#6E6458",
+          "#948A7D",
+          "#B8ADA0",
+          "#D6CDC2",
+          "#F4EFE7"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#FBF8F3",
+        "tonalRamp": [
+          "#14110E",
+          "#2A2620",
+          "#4A443B",
+          "#7A7264",
+          "#A89E8D",
+          "#D6CDBC",
+          "#EDE7DB",
+          "#FBF8F3"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Ink",
+        "canonical": "#17130F",
+        "tonalRamp": [
+          "#17130F",
+          "#2E2822",
+          "#4A423A",
+          "#6E6458",
+          "#B8ADA0",
+          "#D6CDC2",
+          "#EAE4DA",
+          "#F4EFE7"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero name/headline only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section heads."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy, capped at 68ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Eyebrows, metrics labels, timestamps, footer links — always mono, uppercase."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "ease .18s",
+        "purpose": "Default hover/focus transition for buttons and inputs."
+      },
+      {
+        "name": "ease-reveal",
+        "value": "ease .6s",
+        "purpose": "Scroll-triggered section reveal (opacity + translateY)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "md",
+        "value": "900px"
+      },
+      {
+        "name": "sm",
+        "value": "720px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled CTA, used once per view for the highest-priority action (e.g. Get in touch).",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Get in touch</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; font-weight: 500; text-decoration: none; padding: 11px 22px; border-radius: 100px; background: #B33A15; border: 1px solid #B33A15; color: #FFF8F5; transition: filter .18s ease, transform .18s ease; } .ds-btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid #B33A15; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary/tertiary action — anchor-style nav links live in this style.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">See the work</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; font-weight: 500; text-decoration: none; padding: 11px 22px; border-radius: 100px; background: #FBF8F3; border: 1px solid #E0D8CB; color: #17130F; transition: background .18s ease, border-color .18s ease, transform .18s ease; } .ds-btn-ghost:hover { background: #F3EEE5; border-color: #6E6458; transform: translateY(-1px); } .ds-btn-ghost:focus-visible { outline: 2px solid #B33A15; outline-offset: 2px; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Result/keyword tag inside case studies — mono label type, tinted accent background.",
+      "html": "<span class=\"ds-chip\">+18% activation</span>",
+      "css": ".ds-chip { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.74rem; letter-spacing: 0.02em; padding: 7px 14px; border-radius: 100px; background: #F6E7E0; color: #B33A15; white-space: nowrap; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Pill-shaped input used in the Ask composer.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Ask about my experience\">",
+      "css": ".ds-input { font-size: 0.98rem; color: #17130F; background: #FBF8F3; border: 1px solid #E0D8CB; border-radius: 100px; padding: 13px 22px; outline: none; transition: border-color .15s ease; } .ds-input::placeholder { color: #6E6458; } .ds-input:focus { border-color: #B33A15; }"
+    },
+    {
+      "name": "Status Pill",
+      "kind": "custom",
+      "description": "Signature component: hero status indicator with a live-dot halo, mono uppercase label.",
+      "html": "<span class=\"ds-status\"><span class=\"ds-status-dot\"></span>Open to PM roles</span>",
+      "css": ".ds-status { display: inline-flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: #4A423A; border: 1px solid #E0D8CB; border-radius: 100px; padding: 6px 14px; } .ds-status-dot { width: 7px; height: 7px; border-radius: 50%; background: #B33A15; box-shadow: 0 0 0 3px #F6E7E0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Paper",
+    "overview": "This system reads like a well-kept internal memo, not a marketing page: warm paper instead of white, a serif voice for judgment and headlines, a monospace voice for metadata and labels, and a single accent color spent deliberately rather than everywhere. It is a product manager's proof document — evidence-led, hairline-organized, unadorned by cards or shadows — that happens to be beautiful because the person who made it cares about craft.\n\nThe palette explicitly rejects the navy/cyan dark-SaaS template look; warm black in dark mode is the deliberate signal of that rejection. Layout is flat and rule-separated rather than boxed, so content density reads as rigor, not clutter.",
+    "keyCharacteristics": [
+      "Warm paper background (never pure white/black)",
+      "Newspaper serif display type (Newsreader) paired with a newsroom grotesk body (Schibsted Grotesk) and a mono label voice (JetBrains Mono)",
+      "One accent — burnt vermilion — spent sparingly: status dot, links, active/hover states, small chips",
+      "Flat, hairline-separated sections; no shadows, no cards",
+      "Pill-shaped interactive elements (buttons, chips, inputs) throughout"
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "Burnt Vermilion never fills a large surface. It marks a single point of attention per view: a status dot, a link, a hover state, a case-study numeral, a chip.",
+        "section": "colors"
+      },
+      {
+        "name": "The Three Voices Rule",
+        "body": "Serif carries judgment and headlines, sans carries reading, mono carries metadata/labels. Never substitute one register for another.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "No box-shadow anywhere in the system. Section and component boundaries are drawn with 1px hairlines or a change from --paper to --paper-alt, never a shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the accent color rare — one point of attention per view.",
+      "Do use hairlines (--rule) and paper/paper-alt tonal shifts for all separation; never a shadow.",
+      "Do keep interactive elements fully pill-shaped; keep content containers near-square (4–14px radius).",
+      "Do cap running prose at --measure (68ch) and hero/thesis copy at their stated ch-widths."
+    ],
+    "donts": [
+      "Don't introduce a navy/cyan dark-SaaS palette — the warm-black dark mode exists specifically to reject that look.",
+      "Don't add card backgrounds, box-shadows, or elevation to content sections.",
+      "Don't fabricate metrics, testimonials, or case-study content not already in the copy.",
+      "Don't use the accent color as a large fill or background."
+    ]
+  }
+}

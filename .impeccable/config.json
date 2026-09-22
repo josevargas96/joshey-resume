@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-22T03:12:17.337Z",
+        "reason": "Claude verified: only pulsing element is .dots, the chat typing indicator shown while awaiting a live Worker response (thinking() in index.html)"
+      }
+    ]
+  }
+}
