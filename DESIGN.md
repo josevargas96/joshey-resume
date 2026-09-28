@@ -224,7 +224,7 @@ A cool, near-monochrome neutral scale with a single saturated blue doing all of 
 
 A single centered column, 1120px max, with 32px side gutters (20px under 640px). Sections sit on an 88px top rhythm (64px on phones); the footer opens with 96px. Each section starts with a head row: the heading on the left and a short faint meta fact (a place, a date range, a credential) on its baseline to the right, wrapping under it on narrow screens.
 
-- **Hero:** two columns (text, then a 320px 4:5 portrait) with a 72px gap. When no portrait is present, the grid collapses to one column instead of reserving an empty slot. Under 900px the portrait moves above the name at 128px wide.
+- **Hero:** two columns (text, then a 320px 4:5 portrait) with a 72px gap. When no portrait is present, the grid collapses to one column instead of reserving an empty slot. Under 900px the portrait moves above the name as a 112px square avatar with 22px corners, zoomed 1.6x onto the face from the top of the frame, because the full 4:5 photo leaves the face too small at that size.
 - **Metrics:** four equal tiles with 16px gaps; two columns under 900px.
 - **Selected work timeline:** each role is a 220px meta column plus a fluid card column, 48px apart, separated by hairlines. The role meta (title, company, dates) is sticky 28px from the top so it stays in view while that role's cards scroll. Under 900px it becomes one inline line separated by middle dots, and stops sticking.
 - **Case-study beats:** an 88px label column beside the text; stacked under 640px.
@@ -255,7 +255,7 @@ Soft, friendly geometry with a small, consistent radius set tied to what an elem
 - **14px:** the chat composer field.
 - **16px:** cards and metric tiles.
 - **18px with one 6px tail corner:** chat bubbles; the tail sits bottom-left for Jose and bottom-right for the visitor.
-- **24px:** the largest panels (the Ask panel and the portrait); 20px on phones.
+- **24px:** the largest panels (the Ask panel and the portrait); on phones the Ask panel drops to 20px and the avatar uses 22px.
 - **Pill:** status, result chips, and suggestion pills.
 - **Circle:** the status dot and list bullets.
 
