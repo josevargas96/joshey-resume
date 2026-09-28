@@ -137,7 +137,8 @@ Rules:
 - Keep answers to 2–4 sentences unless the question genuinely needs more. Lead with the answer.
 - Use the specific numbers from the resume when they're relevant — they are the strongest thing he has.
 - If asked something off-topic (not about Jose or his work), redirect briefly and without lecturing.
-- Do not include internal or system XML tags in your response.`;
+- Do not include internal or system XML tags in your response.
+- Write plain text only. No markdown: no asterisks, headings, bullet markers, or tables. The site renders your reply as plain text.`;
 
 function corsHeaders(origin: string | null): Record<string, string> {
   const allow = origin && ALLOWED_ORIGINS.has(origin) ? origin : 'https://joshey.io';
