@@ -1,109 +1,257 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-22T03:13:24Z",
+  "generatedAt": "2026-09-27T00:00:00Z",
   "title": "Design System: Jose Vargas — Portfolio",
   "extensions": {
     "colorMeta": {
       "accent": {
         "role": "primary",
-        "displayName": "Burnt Vermilion",
-        "canonical": "#B33A15",
+        "displayName": "Signal Blue",
+        "canonical": "oklch(57.3% 0.199 261.8)",
+        "dark": "#6A9BFF",
         "tonalRamp": [
-          "#3D1407",
-          "#5C1F0B",
-          "#7A2A0E",
-          "#B33A15",
-          "#D65A2E",
-          "#E88259",
-          "#F3B79C",
-          "#FBE1D4"
+          "#00003B",
+          "#001A61",
+          "#043593",
+          "#1151CB",
+          "#3778F5",
+          "#71A3FF",
+          "#AFCBFE",
+          "#E7EFFE"
         ]
       },
-      "ink-faint": {
-        "role": "neutral",
-        "displayName": "Warm Ink Faint",
-        "canonical": "#6E6458",
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "On-Blue",
+        "canonical": "#FFFFFF",
+        "dark": "#0E1116",
         "tonalRamp": [
-          "#17130F",
-          "#2E2822",
-          "#4A423A",
-          "#6E6458",
-          "#948A7D",
-          "#B8ADA0",
-          "#D6CDC2",
-          "#F4EFE7"
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#808080",
+          "#A4A4A4",
+          "#CACACA",
+          "#EEEEEE"
+        ]
+      },
+      "accent-tint": {
+        "role": "primary",
+        "displayName": "Blue Wash",
+        "canonical": "oklch(96.4% 0.016 266.3)",
+        "dark": "#18233A",
+        "tonalRamp": [
+          "#080B12",
+          "#20242C",
+          "#3C4048",
+          "#595E67",
+          "#7C808A",
+          "#A0A5AF",
+          "#C6CBD5",
+          "#EAEEF9"
+        ]
+      },
+      "status-green": {
+        "role": "tertiary",
+        "displayName": "Available Green",
+        "canonical": "oklch(62.7% 0.170 149.2)",
+        "dark": "#4ADE80",
+        "tonalRamp": [
+          "#001101",
+          "#002D0E",
+          "#054E1F",
+          "#177034",
+          "#25984A",
+          "#43C166",
+          "#6FE98B",
+          "#C9FED1"
         ]
       },
       "paper": {
         "role": "neutral",
-        "displayName": "Warm Paper",
-        "canonical": "#FBF8F3",
+        "displayName": "Paper",
+        "canonical": "#FFFFFF",
+        "dark": "#0E1116",
         "tonalRamp": [
-          "#14110E",
-          "#2A2620",
-          "#4A443B",
-          "#7A7264",
-          "#A89E8D",
-          "#D6CDBC",
-          "#EDE7DB",
-          "#FBF8F3"
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#808080",
+          "#A4A4A4",
+          "#CACACA",
+          "#EEEEEE"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Cool Surface",
+        "canonical": "oklch(97.9% 0.003 264.5)",
+        "dark": "#161A21",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#232425",
+          "#3F4041",
+          "#5D5E5F",
+          "#7F8082",
+          "#A4A4A6",
+          "#C9CACC",
+          "#EDEEF0"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Warm Ink",
-        "canonical": "#17130F",
+        "displayName": "Ink",
+        "canonical": "oklch(21.0% 0.032 264.7)",
+        "dark": "#F3F4F6",
         "tonalRamp": [
-          "#17130F",
-          "#2E2822",
-          "#4A423A",
-          "#6E6458",
-          "#B8ADA0",
-          "#D6CDC2",
-          "#EAE4DA",
-          "#F4EFE7"
+          "#050B18",
+          "#1C2434",
+          "#374051",
+          "#555E70",
+          "#778094",
+          "#9BA5B9",
+          "#C0CBE0",
+          "#E7EFFF"
         ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "oklch(44.6% 0.026 256.8)",
+        "dark": "#B4BBC6",
+        "tonalRamp": [
+          "#050B16",
+          "#1C2531",
+          "#37404E",
+          "#545E6D",
+          "#768190",
+          "#9AA6B5",
+          "#C0CCDC",
+          "#E5EFFF"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Ink Faint",
+        "canonical": "oklch(55.1% 0.023 264.4)",
+        "dark": "#8C95A3",
+        "tonalRamp": [
+          "#070B15",
+          "#1E2430",
+          "#3A404C",
+          "#575E6B",
+          "#79808F",
+          "#9DA5B4",
+          "#C3CBDA",
+          "#E7EFFF"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(92.8% 0.006 264.5)",
+        "dark": "#262C36",
+        "tonalRamp": [
+          "#0A0B0E",
+          "#232427",
+          "#3E4043",
+          "#5C5E61",
+          "#7E8084",
+          "#A3A5A8",
+          "#C8CACE",
+          "#ECEEF2"
+        ]
+      },
+      "accent-strong": {
+        "role": "primary",
+        "displayName": "Deep Blue",
+        "canonical": "#1D4ED8",
+        "dark": "#6A9BFF"
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero name/headline only."
+        "purpose": "The name in the hero. One per page."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Metric tile numbers, in blue, tabular numerals."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section heads."
+        "purpose": "Section headings; a larger step voices the footer call to action."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Case-study headings, 30ch max, balanced."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Hero one-liner (ink-soft) and the About first paragraph (ink)."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Role titles, small card headings, Toolkit group headings."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Running copy, capped at 68ch."
+        "purpose": "Paragraphs at a 66ch measure; 16px on phones."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Eyebrows, metrics labels, timestamps, footer links — always mono, uppercase."
+        "purpose": "Problem / Decision / Outcome terms and chat speaker names; sentence case."
       }
     },
-    "shadows": [],
-    "motion": [
+    "shadows": [
       {
-        "name": "ease-standard",
-        "value": "ease .18s",
-        "purpose": "Default hover/focus transition for buttons and inputs."
+        "name": "primary-lift",
+        "value": "0 1px 2px rgb(17 24 39 / .12), 0 6px 16px -6px color-mix(in srgb, var(--accent) 60%, transparent)",
+        "purpose": "Primary button only; the one shadow at rest."
       },
       {
-        "name": "ease-reveal",
-        "value": "ease .6s",
-        "purpose": "Scroll-triggered section reveal (opacity + translateY)."
+        "name": "status-halo",
+        "value": "0 0 0 4px color-mix(in srgb, var(--green) 20%, transparent)",
+        "purpose": "Soft ring around the green status dot; a glow, not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "150ms ease",
+        "purpose": "Hover and state changes on buttons, links, pills, the composer border."
+      },
+      {
+        "name": "state-slow",
+        "value": "200ms ease",
+        "purpose": "Expand chevron rotation."
+      },
+      {
+        "name": "primary-hover-lift",
+        "value": "translateY(-1px)",
+        "purpose": "Primary button hover."
+      },
+      {
+        "name": "typing-blink",
+        "value": "1.3s infinite, 180ms stagger",
+        "purpose": "Three-dot typing indicator in the chat."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "All animations and transitions collapse under prefers-reduced-motion; smooth scroll turns off."
       }
     ],
     "breakpoints": [
       {
-        "name": "md",
+        "name": "tablet",
         "value": "900px"
       },
       {
-        "name": "sm",
-        "value": "720px"
+        "name": "phone",
+        "value": "640px"
       }
     ]
   },
@@ -112,80 +260,149 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Filled CTA, used once per view for the highest-priority action (e.g. Get in touch).",
-      "html": "<a class=\"ds-btn-primary\" href=\"#\">Get in touch</a>",
-      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; font-weight: 500; text-decoration: none; padding: 11px 22px; border-radius: 100px; background: #B33A15; border: 1px solid #B33A15; color: #FFF8F5; transition: filter .18s ease, transform .18s ease; } .ds-btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid #B33A15; outline-offset: 2px; }"
+      "description": "The single filled action in a group; the only shadow at rest.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Get in touch</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border-radius: 10px; border: 1px solid transparent; font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.97rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: transform .15s ease, background .15s ease, border-color .15s ease; } .ds-btn-primary { background: var(--accent, #2F6FEB); color: var(--accent-ink, #FFFFFF); box-shadow: 0 1px 2px rgb(17 24 39 / .12), 0 6px 16px -6px color-mix(in srgb, var(--accent, #2F6FEB) 60%, transparent); } .ds-btn-primary:hover { transform: translateY(-1px); } .ds-btn:focus-visible { outline: 2px solid var(--accent, #2F6FEB); outline-offset: 3px; }"
     },
     {
-      "name": "Ghost Button",
+      "name": "Secondary Button",
       "kind": "button",
-      "refersTo": "button-ghost",
-      "description": "Secondary/tertiary action — anchor-style nav links live in this style.",
-      "html": "<a class=\"ds-btn-ghost\" href=\"#\">See the work</a>",
-      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; font-weight: 500; text-decoration: none; padding: 11px 22px; border-radius: 100px; background: #FBF8F3; border: 1px solid #E0D8CB; color: #17130F; transition: background .18s ease, border-color .18s ease, transform .18s ease; } .ds-btn-ghost:hover { background: #F3EEE5; border-color: #6E6458; transform: translateY(-1px); } .ds-btn-ghost:focus-visible { outline: 2px solid #B33A15; outline-offset: 2px; }"
+      "refersTo": "button-secondary",
+      "description": "Outlined white button for every other action.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">See the work</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border-radius: 10px; border: 1px solid var(--line, #E5E7EB); background: var(--bg, #FFFFFF); color: var(--ink, #111827); font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.97rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: background .15s ease, border-color .15s ease; } .ds-btn-secondary:hover { background: var(--surface, #F7F8FA); border-color: color-mix(in srgb, var(--ink-faint, #6B7280) 50%, var(--line, #E5E7EB)); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--accent, #2F6FEB); outline-offset: 3px; }"
     },
     {
-      "name": "Chip",
-      "kind": "chip",
-      "refersTo": "chip",
-      "description": "Result/keyword tag inside case studies — mono label type, tinted accent background.",
-      "html": "<span class=\"ds-chip\">+18% activation</span>",
-      "css": ".ds-chip { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.74rem; letter-spacing: 0.02em; padding: 7px 14px; border-radius: 100px; background: #F6E7E0; color: #B33A15; white-space: nowrap; }"
+      "name": "Expand Button",
+      "kind": "button",
+      "refersTo": "button-more",
+      "description": "Reveals more of a role; CSS chevron flips when open.",
+      "html": "<button class=\"ds-more\" aria-expanded=\"false\">Also in this role</button>",
+      "css": ".ds-more { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid var(--line, #E5E7EB); background: var(--bg, #FFFFFF); font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.93rem; font-weight: 600; color: var(--ink, #111827); cursor: pointer; transition: background .15s ease; } .ds-more::after { content: ''; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s ease; } .ds-more[aria-expanded=\"true\"]::after { transform: translateY(2px) rotate(-135deg); } .ds-more:hover { background: var(--surface, #F7F8FA); } .ds-more:focus-visible { outline: 2px solid var(--accent, #2F6FEB); outline-offset: 3px; }"
     },
     {
-      "name": "Text Input",
-      "kind": "input",
-      "refersTo": "input",
-      "description": "Pill-shaped input used in the Ask composer.",
-      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Ask about my experience\">",
-      "css": ".ds-input { font-size: 0.98rem; color: #17130F; background: #FBF8F3; border: 1px solid #E0D8CB; border-radius: 100px; padding: 13px 22px; outline: none; transition: border-color .15s ease; } .ds-input::placeholder { color: #6E6458; } .ds-input:focus { border-color: #B33A15; }"
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Name left, three section links right; hover fills Cool Surface.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-name\" href=\"#\">Jose Vargas</a><ul><li><a href=\"#\">Work</a></li><li><a href=\"#\">About</a></li><li><a href=\"#\">Ask</a></li></ul></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-nav-name { font-weight: 700; letter-spacing: -0.015em; text-decoration: none; color: var(--ink, #111827); } .ds-nav ul { list-style: none; display: flex; gap: 4px; margin: 0; padding: 0; } .ds-nav ul a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 8px; font-size: 0.95rem; color: var(--ink-soft, #4B5563); text-decoration: none; transition: background .15s ease, color .15s ease; } .ds-nav ul a:hover { background: var(--surface, #F7F8FA); color: var(--ink, #111827); } .ds-nav a:focus-visible { outline: 2px solid var(--accent, #2F6FEB); outline-offset: 3px; border-radius: 6px; }"
     },
     {
       "name": "Status Pill",
-      "kind": "custom",
-      "description": "Signature component: hero status indicator with a live-dot halo, mono uppercase label.",
-      "html": "<span class=\"ds-status\"><span class=\"ds-status-dot\"></span>Open to PM roles</span>",
-      "css": ".ds-status { display: inline-flex; align-items: center; gap: 9px; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: #4A423A; border: 1px solid #E0D8CB; border-radius: 100px; padding: 6px 14px; } .ds-status-dot { width: 7px; height: 7px; border-radius: 50%; background: #B33A15; box-shadow: 0 0 0 3px #F6E7E0; }"
+      "kind": "chip",
+      "refersTo": "status-pill",
+      "description": "Hairline pill with the green availability dot; hero only.",
+      "html": "<p class=\"ds-status\"><span class=\"ds-dot\"></span>Open to PM roles</p>",
+      "css": ".ds-status { display: inline-flex; align-items: center; gap: 10px; margin: 0; padding: 6px 14px 6px 12px; border: 1px solid var(--line, #E5E7EB); border-radius: 100px; font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.9rem; font-weight: 500; color: var(--ink-soft, #4B5563); } .ds-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green, #16A34A); box-shadow: 0 0 0 4px color-mix(in srgb, var(--green, #16A34A) 20%, transparent); }"
+    },
+    {
+      "name": "Result Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill restating a measurable outcome under a case study.",
+      "html": "<span class=\"ds-chip\">3,900 hrs saved annually</span>",
+      "css": ".ds-chip { display: inline-block; font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.88rem; font-weight: 600; padding: 6px 12px; border-radius: 100px; background: var(--accent-tint, #EEF3FE); color: var(--accent-strong, #1D4ED8); }"
+    },
+    {
+      "name": "Metric Tile",
+      "kind": "card",
+      "refersTo": "metric-tile",
+      "description": "Borderless Cool Surface tile with a blue number and a soft label.",
+      "html": "<div class=\"ds-metric\"><span class=\"ds-n\">$5.7M</span><span class=\"ds-l\">Annual revenue contributed</span></div>",
+      "css": ".ds-metric { padding: 24px; border-radius: 16px; background: var(--surface, #F7F8FA); font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-n { display: block; font-size: clamp(1.8rem, 3.2vw, 2.4rem); font-weight: 700; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: var(--accent, #2F6FEB); } .ds-l { display: block; margin-top: 10px; font-size: 0.93rem; line-height: 1.4; color: var(--ink-soft, #4B5563); }"
+    },
+    {
+      "name": "Case Study Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Hairline white card: title, Problem / Decision / Outcome list with blue labels, result chips.",
+      "html": "<div class=\"ds-study\"><h3>AI-powered clinical note transcription</h3><dl class=\"ds-beats\"><div class=\"ds-beat\"><dt>Problem</dt><dd>Providers wrote outcome notes by hand after every appointment.</dd></div><div class=\"ds-beat\"><dt>Outcome</dt><dd>~3,900 provider hours saved annually.</dd></div></dl></div>",
+      "css": ".ds-study { background: var(--bg, #FFFFFF); border: 1px solid var(--line, #E5E7EB); border-radius: 16px; padding: 30px 32px; font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--ink, #111827); } .ds-study h3 { margin: 0 0 20px; font-size: clamp(1.25rem, 2.2vw, 1.5rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.025em; max-width: 30ch; } .ds-beats { display: grid; gap: 16px; margin: 0; } .ds-beat { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 16px; } .ds-beat dt { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em; color: var(--accent, #2F6FEB); padding-top: 3px; } .ds-beat dd { margin: 0; color: var(--ink-soft, #4B5563); line-height: 1.7; }"
+    },
+    {
+      "name": "Chat Composer",
+      "kind": "input",
+      "refersTo": "composer",
+      "description": "One rounded field holding the input and the blue send button; focus-within turns the border blue.",
+      "html": "<form class=\"ds-composer\"><input type=\"text\" placeholder=\"Ask me anything about my experience…\" aria-label=\"Ask a question\"><button type=\"submit\">Ask</button></form>",
+      "css": ".ds-composer { display: flex; gap: 8px; padding: 6px; background: var(--bg, #FFFFFF); border: 1px solid var(--line, #E5E7EB); border-radius: 14px; transition: border-color .15s ease; font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-composer:focus-within { border-color: var(--accent, #2F6FEB); } .ds-composer input { flex: 1; min-width: 0; font: inherit; font-size: 1rem; color: var(--ink, #111827); background: transparent; border: none; padding: 0 12px; min-height: 44px; outline: none; } .ds-composer input::placeholder { color: var(--ink-faint, #6B7280); } .ds-composer button { font: inherit; font-size: 0.95rem; font-weight: 600; padding: 0 22px; min-height: 44px; border-radius: 10px; border: none; background: var(--accent, #2F6FEB); color: var(--accent-ink, #FFFFFF); cursor: pointer; } .ds-composer button:focus-visible { outline: 2px solid var(--accent, #2F6FEB); outline-offset: 3px; }"
+    },
+    {
+      "name": "Suggestion Pill",
+      "kind": "chip",
+      "refersTo": "suggestion-pill",
+      "description": "Outlined pill that asks a canned question; hover turns blue on real pointers.",
+      "html": "<button type=\"button\" class=\"ds-sugg\">How technical are you?</button>",
+      "css": ".ds-sugg { font-family: Figtree, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.93rem; font-weight: 500; min-height: 44px; padding: 0 16px; border-radius: 100px; border: 1px solid var(--line, #E5E7EB); background: var(--bg, #FFFFFF); color: var(--ink, #111827); cursor: pointer; transition: border-color .15s ease, color .15s ease; } @media (hover: hover) { .ds-sugg:hover { border-color: var(--accent, #2F6FEB); color: var(--accent, #2F6FEB); } } .ds-sugg:focus-visible { outline: 2px solid var(--accent, #2F6FEB); outline-offset: 3px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Working Paper",
-    "overview": "This system reads like a well-kept internal memo, not a marketing page: warm paper instead of white, a serif voice for judgment and headlines, a monospace voice for metadata and labels, and a single accent color spent deliberately rather than everywhere. It is a product manager's proof document — evidence-led, hairline-organized, unadorned by cards or shadows — that happens to be beautiful because the person who made it cares about craft.\n\nThe palette explicitly rejects the navy/cyan dark-SaaS template look; warm black in dark mode is the deliberate signal of that rejection. Layout is flat and rule-separated rather than boxed, so content density reads as rigor, not clutter.",
+    "northStar": "The Friendly Profile",
+    "overview": "A personal portfolio played straight: the category standard, finished at Read.cv clarity and Stripe craft. The person comes first (a status pill, the name at display size, one plain sentence), then the proof (four metric tiles, a role timeline of case-study cards), then a way to talk (an inline chat and an email card). Nothing is themed. The world is a white page, cool near-black ink, one confident blue, and one typeface, and it earns its polish through spacing, tight bold headings, and soft rounded containers rather than decoration.\n\nDensity is relaxed and readable. Sections breathe on a wide vertical rhythm, text holds a comfortable measure, and containers are either hairline-bordered white cards or borderless cool-grey tiles. Blue is reserved for action and evidence, so a scan of any screen lands on the buttons and the numbers. Dark mode is a full peer of light mode, not an afterthought: every color token has a dark value tuned for contrast.\n\nThis world replaces an earlier warm-paper \"decision memo\" treatment that was rejected as too serious. It carries no serif, no paper texture, and no warm accent.",
     "keyCharacteristics": [
-      "Warm paper background (never pure white/black)",
-      "Newspaper serif display type (Newsreader) paired with a newsroom grotesk body (Schibsted Grotesk) and a mono label voice (JetBrains Mono)",
-      "One accent — burnt vermilion — spent sparingly: status dot, links, active/hover states, small chips",
-      "Flat, hairline-separated sections; no shadows, no cards",
-      "Pill-shaped interactive elements (buttons, chips, inputs) throughout"
+      "White ground, cool ink, one blue accent; green appears only as the status dot.",
+      "Figtree for everything, bold and tightly tracked at heading sizes.",
+      "Soft rounded geometry: 10px controls, 16px cards and tiles, 24px large panels, pills for status and tags.",
+      "Flat by default; the primary button is the only surface with a shadow at rest.",
+      "A timeline whose role details stay in view while case-study cards scroll past.",
+      "Full dark mode through `prefers-color-scheme`; print maps everything to black on white."
     ],
     "rules": [
       {
-        "name": "The One Accent Rule",
-        "body": "Burnt Vermilion never fills a large surface. It marks a single point of attention per view: a status dot, a link, a hover state, a case-study numeral, a chip.",
+        "name": "The One Blue Rule",
+        "body": "Blue is the only hue that carries emphasis. No second accent, no gradients, no colored section backgrounds. Green exists only as the status dot.",
         "section": "colors"
       },
       {
-        "name": "The Three Voices Rule",
-        "body": "Serif carries judgment and headlines, sans carries reading, mono carries metadata/labels. Never substitute one register for another.",
+        "name": "The Proof Is Blue Rule",
+        "body": "Accent-colored text marks evidence or action: numbers, outcome labels, result chips, links you can use. Body copy never turns blue for decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Figtree only. Hierarchy comes from size, weight, tracking, and color, never from a second typeface.",
         "section": "typography"
       },
       {
-        "name": "The Flat-By-Default Rule",
-        "body": "No box-shadow anywhere in the system. Section and component boundaries are drawn with 1px hairlines or a change from --paper to --paper-alt, never a shadow.",
+        "name": "The Tighten As You Grow Rule",
+        "body": "Tracking scales with size: -0.01em at subtitle size down to -0.045em at display size. Body text stays at normal tracking.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sticky Meta Rule",
+        "body": "Context holds still while evidence scrolls: role details stay pinned beside their case studies on wide screens.",
+        "section": "layout"
+      },
+      {
+        "name": "The Earned Shadow Rule",
+        "body": "One shadow per screen at rest, and it belongs to the primary action. Cards, tiles, pills, and panels stay flat; they separate by hairline or fill, never by drop shadow. Shadows are soft and blurred; never a hard offset.",
         "section": "elevation"
+      },
+      {
+        "name": "The Radius Follows Role Rule",
+        "body": "Controls get 10px, containers get 16px, tags and status get pills. A new element takes the radius of its role; it does not invent a new one.",
+        "section": "shapes"
       }
     ],
     "dos": [
-      "Do keep the accent color rare — one point of attention per view.",
-      "Do use hairlines (--rule) and paper/paper-alt tonal shifts for all separation; never a shadow.",
-      "Do keep interactive elements fully pill-shaped; keep content containers near-square (4–14px radius).",
-      "Do cap running prose at --measure (68ch) and hero/thesis copy at their stated ch-widths."
+      "Do keep blue for action and evidence only: buttons, metric numbers, outcome labels, result chips, usable links, focus.",
+      "Do set every heading in Figtree 700 with negative tracking that tightens as size grows.",
+      "Do separate containers with a 1px hairline or a Cool Surface fill.",
+      "Do give controls 10px corners, containers 16px, and tags or status a pill.",
+      "Do collapse a layout slot that has no content (the hero drops to one column without a portrait).",
+      "Do keep hit areas at 44px minimum and scope hover color changes to `hover: hover` where a tap would leave them stuck.",
+      "Do define a dark value for every new color token, and a print override for it.",
+      "Do keep accent text at 4.5:1 or better against its own ground at body and label sizes."
     ],
     "donts": [
-      "Don't introduce a navy/cyan dark-SaaS palette — the warm-black dark mode exists specifically to reject that look.",
-      "Don't add card backgrounds, box-shadows, or elevation to content sections.",
-      "Don't fabricate metrics, testimonials, or case-study content not already in the copy.",
-      "Don't use the accent color as a large fill or background."
+      "Don't add a second accent hue, gradients, or colored section backgrounds.",
+      "Don't introduce a second typeface, a serif, or uppercase letterspaced labels.",
+      "Don't put shadows on cards, tiles, or pills, and never use a hard offset shadow.",
+      "Don't place a small label or kicker above a section heading; section context goes in the faint meta on the heading's baseline, and it states a fact.",
+      "Don't use glyph or emoji icons; draw small marks in CSS or inline SVG.",
+      "Don't lighten Ink Faint below its current value or use it for body copy.",
+      "Don't bring back warm paper, Newsreader, or vermilion; that direction was rejected."
     ]
   }
 }

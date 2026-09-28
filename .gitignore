@@ -4,4 +4,4 @@ HANDOFF.md
 
 # Impeccable tooling — reinstall with `npx impeccable install`
 .claude/
-.impeccable/hook.cache.json
+.impeccable/

@@ -13,7 +13,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
 <!-- Google tag (gtag.js) -->
@@ -27,269 +27,240 @@
 </head>
 <body>
 
+<!-- ============================ NAV ============================ -->
+<nav class="wrap nav" aria-label="Primary">
+  <a class="nav-name" href="#top">Jose Vargas</a>
+  <ul>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#ask">Ask</a></li>
+  </ul>
+</nav>
+
 <!-- ============================ HERO ============================ -->
-<header class="wrap hero">
-  <div>
-    <span class="status">Open to PM roles</span>
-    <h1>Jose<br>Vargas</h1>
+<header class="wrap hero" id="top">
+  <div class="intro">
+    <p class="status"><span class="dot" aria-hidden="true"></span>Open to PM roles</p>
+    <h1>Jose Vargas</h1>
     <p class="thesis">I build products that <em>move revenue</em>. Payments, telehealth, and AI-powered workflows.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:josheyvargas@icloud.com">Get in touch</a>
-      <a class="btn btn-ghost" href="#work">See the work</a>
-      <a class="btn btn-ghost" href="#ask">Ask about me</a>
+      <a class="btn btn-secondary" href="#work">See the work</a>
+      <a class="btn btn-secondary" href="#ask">Ask about me</a>
     </div>
   </div>
 
   <!-- PHOTO GOES HERE.
-       Drop a portrait in the repo root (roughly 3:4 crop, e.g. 600x800),
-       then uncomment the line below and point src= at it. Styling is already
-       written: it sizes itself, rounds, goes grayscale, and on phones it
-       moves above the name automatically. Nothing else to change.
+       Drop a portrait in the repo root as me.jpg (4:5 crop, e.g. 800x1000),
+       then uncomment the figure below. Styling is already written: it sits
+       to the right of the name on desktop and above it on phones. Until then
+       the hero runs as a single column.
 
-  <img class="portrait" src="me.jpg" alt="Jose Vargas">
+  <figure class="portrait">
+    <img src="me.jpg" alt="Jose Vargas" width="800" height="1000">
+  </figure>
   -->
 </header>
 
 <!-- ============================ METRICS ============================ -->
 <div class="wrap">
-  <div class="metrics reveal">
-    <div class="metric"><span class="n">$5.7M</span><span class="l">Annual revenue<br>contributed</span></div>
-    <div class="metric"><span class="n">83 hrs</span><span class="l">Provider hours<br>freed weekly</span></div>
-    <div class="metric"><span class="n">3,900 hrs</span><span class="l">Provider hours<br>saved annually</span></div>
-    <div class="metric"><span class="n">5</span><span class="l">Web apps<br>owned</span></div>
-  </div>
+  <ul class="metrics" aria-label="Highlights">
+    <li class="metric"><span class="n">$5.7M</span><span class="l">Annual revenue contributed</span></li>
+    <li class="metric"><span class="n">83 hrs</span><span class="l">Provider hours freed weekly</span></li>
+    <li class="metric"><span class="n">3,900 hrs</span><span class="l">Provider hours saved annually</span></li>
+    <li class="metric"><span class="n">5</span><span class="l">Web apps owned</span></li>
+  </ul>
 </div>
 
-<!-- ============================ ABOUT ============================ -->
 <main>
-<section class="wrap about reveal">
+<!-- ============================ ABOUT ============================ -->
+<section class="wrap about" id="about" aria-labelledby="about-h">
   <div class="section-head">
-    <h2>About</h2>
-    <span class="eyebrow">Denver, CO</span>
+    <h2 id="about-h">About</h2>
+    <span class="meta">Denver, CO</span>
   </div>
-  <p>There's this idea that a resume should fit on one page. Squeezing your experience, your impact, and your personality into a single sheet sounds like a recipe for leaving out the best parts. So I built this instead.</p>
-  <p>I'm a Product Manager with 5+ years building digital products that directly drive revenue. Today I lead the telehealth product for North America at <strong>hear.com</strong>, owning the full lifecycle across five web applications and a cross-functional team of seven.</p>
-  <p>The common thread across my work is friction in moments that actually matter: a payment that has to clear, a customer who needs the right provider, a note that has to get written down correctly. I build the layer that removes that friction, whether it's a payments API, a matching engine, or an LLM listening in on an appointment.</p>
-  <p>I pull my own data from Snowflake and build my own Domo dashboards because I don't like waiting for someone else's answer to my question. That habit is also how PRS started. I noticed the routing problem in the data before anyone asked me to fix it.</p>
-  <p>Outside of healthcare I follow fintech, crypto and blockchain, and the music and live events space closely. These are industries where the product decision shows up directly in a transaction: get it wrong, and you don't just lose a click, you lose the sale.</p>
+  <div class="about-body">
+    <p>There's this idea that a resume should fit on one page. Squeezing your experience, your impact, and your personality into a single sheet sounds like a recipe for leaving out the best parts. So I built this instead.</p>
+    <p>I'm a Product Manager with 5+ years building digital products that directly drive revenue. Today I lead the telehealth product for North America at <strong>hear.com</strong>, owning the full lifecycle across five web applications and a cross-functional team of seven.</p>
+    <p>The common thread across my work is friction in moments that actually matter: a payment that has to clear, a customer who needs the right provider, a note that has to get written down correctly. I build the layer that removes that friction, whether it's a payments API, a matching engine, or an LLM listening in on an appointment.</p>
+    <p>I pull my own data from Snowflake and build my own Domo dashboards because I don't like waiting for someone else's answer to my question. That habit is also how PRS started. I noticed the routing problem in the data before anyone asked me to fix it.</p>
+    <p>Outside of healthcare I follow fintech, crypto and blockchain, and the music and live events space closely. These are industries where the product decision shows up directly in a transaction: get it wrong, and you don't just lose a click, you lose the sale.</p>
+  </div>
 </section>
 
 <!-- ============================ WORK ============================ -->
-<section class="wrap" id="work">
-  <div class="section-head reveal">
-    <h2>Selected work</h2>
-    <span class="eyebrow">2020 — Present</span>
+<section class="wrap" id="work" aria-labelledby="work-h">
+  <div class="section-head">
+    <h2 id="work-h">Selected work</h2>
+    <span class="meta">2020 — Present</span>
   </div>
 
-  <!-- 01 -->
-  <article class="case reveal">
-    <div class="case-meta">
-      <span class="num">01</span>
-      <span class="co">hear.com</span>
-      <span class="role">Product Manager</span>
-      <span class="when">Jan 2024 — Present</span>
+  <!-- Role 1 -->
+  <article class="role">
+    <div class="role-meta">
+      <div class="role-sticky">
+        <span class="title">Product Manager</span>
+        <span class="co">hear.com</span>
+        <span class="when">Jan 2024 — Present</span>
+      </div>
     </div>
-    <div class="case-body">
-      <div class="study">
+    <div class="role-body">
+      <div class="study card">
         <h3>Matching customers to the right provider, automatically</h3>
-
-        <div class="beat">
-          <span class="eyebrow">Problem</span>
-          <p>Appointment scheduling assigned customers to whoever was free. Providers with the wrong capability profile got booked anyway, capacity sat idle, and conversion suffered: a cost problem and a revenue problem wearing the same hat.</p>
-        </div>
-        <div class="beat">
-          <span class="eyebrow">Decision</span>
-          <p>I defined the solution architecture for a Provider Recommendation Service that matched customers to providers on availability <em>and</em> capability, then drove full-cycle delivery with my engineering team. Once it shipped, I extended it with a performance scoring layer that prioritized providers with higher closing rates and lower return rates.</p>
-        </div>
-        <div class="beat">
-          <span class="eyebrow">Outcome</span>
-          <p>Routing stopped being a coin flip. Wasted capacity on salaried providers dropped, and the revenue impact was the largest single contribution of my career so far. Two years on, the matching logic is still the foundation: another team built on it this year to launch fully automated voice AI agents that call previously uncalled leads and schedule appointments with no human in the loop. Over the trailing 90 days, that's generated ~$2.0M in net booked revenue, adjusted for expected returns.</p>
-        </div>
-
+        <dl class="beats">
+          <div class="beat"><dt>Problem</dt><dd>Appointment scheduling assigned customers to whoever was free. Providers with the wrong capability profile got booked anyway, capacity sat idle, and conversion suffered: a cost problem and a revenue problem wearing the same hat.</dd></div>
+          <div class="beat"><dt>Decision</dt><dd>I defined the solution architecture for a Provider Recommendation Service that matched customers to providers on availability <em>and</em> capability, then drove full-cycle delivery with my engineering team. Once it shipped, I extended it with a performance scoring layer that prioritized providers with higher closing rates and lower return rates.</dd></div>
+          <div class="beat"><dt>Outcome</dt><dd>Routing stopped being a coin flip. Wasted capacity on salaried providers dropped, and the revenue impact was the largest single contribution of my career so far. Two years on, the matching logic is still the foundation: another team built on it this year to launch fully automated voice AI agents that call previously uncalled leads and schedule appointments with no human in the loop. Over the trailing 90 days, that's generated ~$2.0M in net booked revenue, adjusted for expected returns.</dd></div>
+        </dl>
         <div class="result">
           <span class="chip">+$5.7M annual revenue</span>
           <span class="chip">−$150K annual cost</span>
         </div>
       </div>
 
-      <div class="study">
+      <div class="study card">
         <h3>AI-powered clinical note transcription</h3>
-
-        <div class="beat">
-          <span class="eyebrow">Problem</span>
-          <p>Providers were writing outcome notes by hand after every appointment, roughly 5 minutes each across ~180 appointments a day. It was the single biggest time drain outside the appointment itself, and none of that data was structured or usable for anything beyond the note.</p>
-        </div>
-        <div class="beat">
-          <span class="eyebrow">Decision</span>
-          <p>I defined the product strategy for an LLM-powered transcription pipeline built on Zoom RTMS, auto-generating outcome notes directly from the appointment.</p>
-        </div>
-        <div class="beat">
-          <span class="eyebrow">Outcome</span>
-          <p>~3,900 provider hours saved annually, and it created something that didn't exist before: the company's first structured data layer for provider coaching.</p>
-        </div>
-
+        <dl class="beats">
+          <div class="beat"><dt>Problem</dt><dd>Providers were writing outcome notes by hand after every appointment, roughly 5 minutes each across ~180 appointments a day. It was the single biggest time drain outside the appointment itself, and none of that data was structured or usable for anything beyond the note.</dd></div>
+          <div class="beat"><dt>Decision</dt><dd>I defined the product strategy for an LLM-powered transcription pipeline built on Zoom RTMS, auto-generating outcome notes directly from the appointment.</dd></div>
+          <div class="beat"><dt>Outcome</dt><dd>~3,900 provider hours saved annually, and it created something that didn't exist before: the company's first structured data layer for provider coaching.</dd></div>
+        </dl>
         <div class="result">
           <span class="chip">3,900 hrs saved annually</span>
           <span class="chip">New coaching data layer</span>
         </div>
       </div>
 
-      <div class="study">
+      <div class="study card">
         <h3>Telehealth platform rebuild</h3>
-
-        <div class="beat">
-          <span class="eyebrow">Problem</span>
-          <p>The legacy platform wasn't built for how North American providers actually worked. Appointments ran long. Providers self-reported averages in the 60-70 minute range, with a meaningful share pushing past 75, and performance broke down for anyone on a slow connection. It was a platform designed elsewhere, retrofitted for a market it didn't fit.</p>
-        </div>
-        <div class="beat">
-          <span class="eyebrow">Decision</span>
-          <p>I owned the US market adaptation of a cross-regional rebuild, applying direct provider relationships and pain-point knowledge to map the new platform to North American workflows, not just porting the old one over.</p>
-        </div>
-        <div class="beat">
-          <span class="eyebrow">Outcome</span>
-          <p>Average appointment time has roughly halved to 33-36 minutes, and the outlier ceiling dropped from 75 minutes to 45. It's still trending down as we keep shipping.</p>
-        </div>
-
+        <dl class="beats">
+          <div class="beat"><dt>Problem</dt><dd>The legacy platform wasn't built for how North American providers actually worked. Appointments ran long. Providers self-reported averages in the 60-70 minute range, with a meaningful share pushing past 75, and performance broke down for anyone on a slow connection. It was a platform designed elsewhere, retrofitted for a market it didn't fit.</dd></div>
+          <div class="beat"><dt>Decision</dt><dd>I owned the US market adaptation of a cross-regional rebuild, applying direct provider relationships and pain-point knowledge to map the new platform to North American workflows, not just porting the old one over.</dd></div>
+          <div class="beat"><dt>Outcome</dt><dd>Average appointment time has roughly halved to 33-36 minutes, and the outlier ceiling dropped from 75 minutes to 45. It's still trending down as we keep shipping.</dd></div>
+        </dl>
         <div class="result">
           <span class="chip">~50% reduction in appointment time</span>
           <span class="chip">83 hrs freed weekly</span>
         </div>
-
-        <button class="more" aria-expanded="false" aria-controls="also-1">Also in this role</button>
-        <ul class="also" id="also-1" hidden>
-          <li>Owned API integrations and asynchronous messaging architecture across all five applications, including Salesforce CRM integration.</li>
-          <li>Built and maintained Snowflake-connected datasets and SQL queries in Domo to power KPI dashboards; used Mixpanel, LogRocket, and New Relic for behavior analysis and system monitoring.</li>
-        </ul>
-      </div>
-    </div>
-  </article>
-
-  <!-- 02 -->
-  <article class="case reveal">
-    <div class="case-meta">
-      <span class="num">02</span>
-      <span class="co">hear.com</span>
-      <span class="role">Associate Product Manager</span>
-      <span class="when">Jan 2022 — Dec 2023</span>
-    </div>
-    <div class="case-body">
-      <div class="beat">
-        <p>Built a unified payment platform across Stripe and Allegro, improving EBITDA by $200K annually with 95% adoption.</p>
       </div>
 
-      <button class="more" aria-expanded="false" aria-controls="also-2">Also in this role</button>
-
-      <div class="expand" id="also-2" hidden>
-      <h3>One payment platform instead of four manual processes</h3>
-
-      <div class="beat">
-        <span class="eyebrow">Problem</span>
-        <p>FinOps was running payments through a patchwork of manual steps across disconnected providers. Every transaction carried human overhead, and disputes were handled ad hoc with no defined resolution path.</p>
-      </div>
-      <div class="beat">
-        <span class="eyebrow">Decision</span>
-        <p>I led development of a unified payment platform integrating the Stripe and Allegro APIs, and wrote the product requirements for chargeback and dispute management flows so exposure was handled by process rather than by whoever picked up the ticket.</p>
-      </div>
-      <div class="beat">
-        <span class="eyebrow">Outcome</span>
-        <p>Adoption hit 95%, the number I care most about here, because a payments tool nobody uses is just a second patchwork.</p>
-      </div>
-
-      <div class="result">
-        <span class="chip">+$200K annual EBITDA</span>
-        <span class="chip">−70% manual process</span>
-        <span class="chip">95% adoption</span>
-      </div>
-
-      <ul class="also">
-        <li>Orchestrated cross-functional teams across multiple simultaneous projects, implementing agile practices and breaking complex requirements into achievable sprints.</li>
-        <li>Managed stakeholder relationships across technical and business teams, keeping implementation aligned to business objectives.</li>
+      <button class="more" aria-expanded="false" aria-controls="also-1">Also in this role</button>
+      <ul class="also" id="also-1" hidden>
+        <li>Owned API integrations and asynchronous messaging architecture across all five applications, including Salesforce CRM integration.</li>
+        <li>Built and maintained Snowflake-connected datasets and SQL queries in Domo to power KPI dashboards; used Mixpanel, LogRocket, and New Relic for behavior analysis and system monitoring.</li>
       </ul>
+    </div>
+  </article>
+
+  <!-- Role 2 -->
+  <article class="role">
+    <div class="role-meta">
+      <div class="role-sticky">
+        <span class="title">Associate Product Manager</span>
+        <span class="co">hear.com</span>
+        <span class="when">Jan 2022 — Dec 2023</span>
+      </div>
+    </div>
+    <div class="role-body">
+      <div class="study card">
+        <p class="summary">Built a unified payment platform across Stripe and Allegro, improving EBITDA by $200K annually with 95% adoption.</p>
+
+        <button class="more" aria-expanded="false" aria-controls="also-2">Also in this role</button>
+
+        <div class="expand" id="also-2" hidden>
+          <h3>One payment platform instead of four manual processes</h3>
+          <dl class="beats">
+            <div class="beat"><dt>Problem</dt><dd>FinOps was running payments through a patchwork of manual steps across disconnected providers. Every transaction carried human overhead, and disputes were handled ad hoc with no defined resolution path.</dd></div>
+            <div class="beat"><dt>Decision</dt><dd>I led development of a unified payment platform integrating the Stripe and Allegro APIs, and wrote the product requirements for chargeback and dispute management flows so exposure was handled by process rather than by whoever picked up the ticket.</dd></div>
+            <div class="beat"><dt>Outcome</dt><dd>Adoption hit 95%, the number I care most about here, because a payments tool nobody uses is just a second patchwork.</dd></div>
+          </dl>
+          <div class="result">
+            <span class="chip">+$200K annual EBITDA</span>
+            <span class="chip">−70% manual process</span>
+            <span class="chip">95% adoption</span>
+          </div>
+          <ul class="also">
+            <li>Orchestrated cross-functional teams across multiple simultaneous projects, implementing agile practices and breaking complex requirements into achievable sprints.</li>
+            <li>Managed stakeholder relationships across technical and business teams, keeping implementation aligned to business objectives.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </article>
 
-  <!-- 03 -->
-  <article class="case reveal">
-    <div class="case-meta">
-      <span class="num">03</span>
-      <span class="co">hear.com</span>
-      <span class="role">ERP Support Specialist</span>
-      <span class="when">Nov 2020 — Jan 2022</span>
+  <!-- Role 3 -->
+  <article class="role">
+    <div class="role-meta">
+      <div class="role-sticky">
+        <span class="title">ERP Support Specialist</span>
+        <span class="co">hear.com</span>
+        <span class="when">Nov 2020 — Jan 2022</span>
+      </div>
     </div>
-    <div class="case-body">
-      <div class="beat">
-        <p>Cut ERP issue resolution time from several days to 1-2 days, my first experience bridging business needs and engineering execution.</p>
-      </div>
+    <div class="role-body">
+      <div class="study card">
+        <p class="summary">Cut ERP issue resolution time from several days to 1-2 days, my first experience bridging business needs and engineering execution.</p>
 
-      <button class="more" aria-expanded="false" aria-controls="also-3">Also in this role</button>
+        <button class="more" aria-expanded="false" aria-controls="also-3">Also in this role</button>
 
-      <div class="expand" id="also-3" hidden>
-      <h3>Where I learned to translate between users and engineers</h3>
-
-      <div class="beat">
-        <span class="eyebrow">Problem</span>
-        <p>US ERP users and the development team in Berlin were separated by time zones, language, and vocabulary. Issues took days to resolve because nobody owned the translation between what users described and what engineers could act on.</p>
-      </div>
-      <div class="beat">
-        <span class="eyebrow">Decision</span>
-        <p>I built independent troubleshooting depth and created a structured escalation process between the two sides. As I got more comfortable technically, I started helping our PM gather requirements from business units directly.</p>
-      </div>
-      <div class="beat">
-        <span class="eyebrow">Outcome</span>
-        <p>Average resolution dropped from several days to one or two. More importantly, this is where I found the work I actually wanted to do.</p>
-      </div>
-
-      <div class="result">
-        <span class="chip">Days → 1–2 days to resolve</span>
-      </div>
+        <div class="expand" id="also-3" hidden>
+          <h3>Where I learned to translate between users and engineers</h3>
+          <dl class="beats">
+            <div class="beat"><dt>Problem</dt><dd>US ERP users and the development team in Berlin were separated by time zones, language, and vocabulary. Issues took days to resolve because nobody owned the translation between what users described and what engineers could act on.</dd></div>
+            <div class="beat"><dt>Decision</dt><dd>I built independent troubleshooting depth and created a structured escalation process between the two sides. As I got more comfortable technically, I started helping our PM gather requirements from business units directly.</dd></div>
+            <div class="beat"><dt>Outcome</dt><dd>Average resolution dropped from several days to one or two. More importantly, this is where I found the work I actually wanted to do.</dd></div>
+          </dl>
+          <div class="result">
+            <span class="chip">Days → 1–2 days to resolve</span>
+          </div>
+        </div>
       </div>
     </div>
   </article>
 </section>
 
 <!-- ============================ ASK ============================ -->
-<section class="ask" id="ask">
-  <div class="wrap ask-inner reveal">
+<section class="wrap ask-wrap" id="ask" aria-labelledby="ask-h">
+  <div class="ask">
     <div class="section-head">
-      <h2>Ask about my work</h2>
-      <span class="eyebrow">Interactive</span>
+      <h2 id="ask-h">Ask about my work</h2>
+      <span class="meta">Interactive</span>
     </div>
     <p class="ask-lede">Rather than scroll, just ask. This answers questions about my experience using only what's on this page.</p>
 
     <div class="suggestions">
-      <button class="sugg">What's your biggest revenue win?</button>
-      <button class="sugg">How technical are you?</button>
-      <button class="sugg">Why are you looking to move?</button>
-      <button class="sugg">Tell me about the AI work</button>
+      <button type="button" class="sugg">What's your biggest revenue win?</button>
+      <button type="button" class="sugg">How technical are you?</button>
+      <button type="button" class="sugg">Why are you looking to move?</button>
+      <button type="button" class="sugg">Tell me about the AI work</button>
     </div>
 
     <div class="thread" id="thread" aria-live="polite"></div>
 
     <form class="composer" id="composer" autocomplete="off">
-      <input id="q" type="text" placeholder="Ask me anything about my experience…" aria-label="Ask a question">
+      <input id="q" type="text" maxlength="500" placeholder="Ask me anything about my experience…" aria-label="Ask a question" aria-describedby="ask-note">
       <button type="submit" id="send">Ask</button>
     </form>
-    <p class="ask-note">Answers are generated from my resume only. For anything else, email me.</p>
+    <p class="ask-note" id="ask-note">Answers are generated from my resume only. For anything else, email me.</p>
   </div>
 </section>
 
 <!-- ============================ WANT ============================ -->
-<section class="wrap reveal">
+<section class="wrap" aria-labelledby="want-h">
   <div class="section-head">
-    <h2>What I'm looking for</h2>
-    <span class="eyebrow">Currently open</span>
+    <h2 id="want-h">What I'm looking for</h2>
+    <span class="meta">Currently open</span>
   </div>
   <div class="want">
-    <div class="want-col">
+    <div class="want-col card">
       <h3>The role</h3>
       <p>A PM role where I own outcomes end to end, the way PRS became infrastructure another team is still building on two years later. I want to be somewhere that compounds like that, around product people sharp enough to teach me things I don't know yet.</p>
     </div>
-    <div class="want-col">
+    <div class="want-col card">
       <h3>The industries</h3>
       <p>Fintech and payments, crypto and blockchain, and music and live events. Long-term I'm working toward a CPO role or founding my own company.</p>
     </div>
-    <div class="want-col">
+    <div class="want-col card">
       <h3>The location</h3>
       <p>Based in Denver and open to remote. Longer term, I'd like to relocate to New York City.</p>
     </div>
@@ -297,10 +268,10 @@
 </section>
 
 <!-- ============================ SKILLS ============================ -->
-<section class="wrap reveal">
+<section class="wrap" aria-labelledby="skills-h">
   <div class="section-head">
-    <h2>Toolkit</h2>
-    <span class="eyebrow">BBA Finance, FIU '21</span>
+    <h2 id="skills-h">Toolkit</h2>
+    <span class="meta">BBA Finance, FIU '21</span>
   </div>
   <div class="skills">
     <div class="skill-group">
@@ -325,58 +296,21 @@
 
 <!-- ============================ FOOTER ============================ -->
 <footer class="wrap">
-  <div class="foot-grid">
+  <div class="foot card">
     <p class="foot-cta">Let's talk product. <a href="mailto:josheyvargas@icloud.com">josheyvargas@icloud.com</a></p>
-    <div class="foot-links">
-      <a href="https://www.linkedin.com/in/jose-vargas-851703151/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/josevargas96" target="_blank" rel="noopener">GitHub</a>
+    <div class="foot-row">
+      <button type="button" class="btn btn-secondary copy" data-copy="josheyvargas@icloud.com">Copy email</button>
+      <span class="copy-status" role="status" aria-live="polite"></span>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/in/jose-vargas-851703151/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/josevargas96" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </div>
-  <p class="colophon">Built by hand. Newsreader &amp; Schibsted Grotesk. Denver, Colorado.</p>
+  <p class="colophon">Built by hand. Figtree. Denver, Colorado.</p>
 </footer>
 
 <script>
-/* ---------- reveal on scroll ----------
-   threshold 0 + a bottom rootMargin so tall sections fire as soon as their
-   top edge clears the fold, rather than waiting for a % of a 900px block. */
-const reveals = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window) {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      // isIntersecting OR already scrolled past — a fast scroll or an anchor
-      // jump can skip an element entirely, and it must not stay invisible.
-      if (e.isIntersecting || e.boundingClientRect.top < 0) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
-  reveals.forEach(el => io.observe(el));
-
-  // Safety net: a jump-scroll (deep link, Cmd+End, fast flick) can move an
-  // element from below the fold to above it without ever firing the observer.
-  // Sweep on scroll and reveal anything that's reached the viewport.
-  // Runs directly rather than via requestAnimationFrame — rAF is suspended in
-  // background tabs, which would leave the sweep silently dead. The query
-  // shrinks to nothing as elements reveal, so the cost is negligible.
-  const sweep = () => {
-    const pending = document.querySelectorAll('.reveal:not(.in)');
-    if (!pending.length) { removeEventListener('scroll', sweep); return; }
-    pending.forEach(el => {
-      if (el.getBoundingClientRect().top < window.innerHeight) {
-        el.classList.add('in');
-        io.unobserve(el);
-      }
-    });
-  };
-  addEventListener('scroll', sweep, { passive: true });
-  addEventListener('load', sweep);
-  addEventListener('visibilitychange', sweep);
-  sweep();
-} else {
-  reveals.forEach(el => el.classList.add('in'));
-}
-
 /* ---------- expand "also in this role" ----------
    Panels are either an extra-bullets list or a full case study; both just
    toggle [hidden], so one handler covers every .more button on the page. */
@@ -388,31 +322,55 @@ document.querySelectorAll('.more').forEach(btn => {
     panel.hidden = open;
     btn.setAttribute('aria-expanded', String(!open));
     btn.textContent = open ? label : 'Show less';
-    // Revealed blocks were never visible to the observer, so mark them in
-    // directly — otherwise they'd unhide at opacity 0 and stay there.
-    if (!open) panel.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in'));
-    const source = btn.dataset.label || btn.closest('.case').querySelector('.role').textContent;
+    const source = btn.dataset.label || btn.closest('.role').querySelector('.title').textContent;
     gtag('event', 'role_expand', { role: source, action: open ? 'collapse' : 'expand' });
   });
 });
 
 /* ---------- outbound link tracking ---------- */
-document.querySelectorAll('.foot-links a, .cta-row a').forEach(a => {
+document.querySelectorAll('.foot-links a, .cta-row a, .foot-cta a').forEach(a => {
   a.addEventListener('click', () => gtag('event', 'cta_click', { label: a.textContent.trim() }));
 });
 
+/* ---------- copy email ----------
+   mailto does nothing on a machine with no mail client set up. */
+document.querySelectorAll('.copy').forEach(btn => {
+  const status = btn.parentElement.querySelector('.copy-status');
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      status.textContent = 'Copied';
+      gtag('event', 'cta_click', { label: 'Copy email' });
+    } catch (err) {
+      status.textContent = btn.dataset.copy;
+    }
+    clearTimeout(btn._t);
+    btn._t = setTimeout(() => { status.textContent = ''; }, 3000);
+  });
+});
+
 /* ============================================================
-   ASK — resume chat
-   Set CHAT_ENDPOINT to your deployed Cloudflare Worker URL.
-   Until then the section degrades to a friendly email prompt.
+   ASK — resume chat, backed by the Cloudflare Worker in worker/.
+   Any failure falls back to a retry plus the email address.
    ============================================================ */
 const CHAT_ENDPOINT = 'https://resume-chat.josheyvargas.workers.dev';
 
+const EMAIL    = 'josheyvargas@icloud.com';
+const MAX_Q    = 500;   // mirrors the input's maxlength; the Worker caps at 1000
 const thread   = document.getElementById('thread');
 const composer = document.getElementById('composer');
 const input    = document.getElementById('q');
 const sendBtn  = document.getElementById('send');
+const suggs    = document.querySelectorAll('.sugg');
 const history  = [];
+let busy = false;
+
+function setBusy(on) {
+  busy = on;
+  sendBtn.disabled = on;
+  suggs.forEach(b => { b.disabled = on; });
+  thread.setAttribute('aria-busy', String(on));
+}
 
 function bubble(who, text, cls = '') {
   const el = document.createElement('div');
@@ -431,21 +389,51 @@ function bubble(who, text, cls = '') {
 
 function thinking() {
   const msg = bubble('Jose', '');
-  msg.innerHTML = '<span class="dots"><span></span><span></span><span></span></span>';
+  msg.innerHTML = '<span class="dots" aria-hidden="true"><span></span><span></span><span></span></span><span class="sr-only">Writing an answer…</span>';
   return msg;
 }
 
+// The model is told to write plain text; this catches the markdown it slips in anyway.
+function plain(text) {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/__(.+?)__/g, '$1')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/^\s*[-*]\s+/gm, '– ')
+    .trim();
+}
+
+// Failed turns don't stay in `history`, so a retry (or the next question) sends a clean thread.
+function fail(pending, userTurn, question, reason) {
+  const turn = pending.closest('.turn');
+  turn.classList.add('err');
+  pending.textContent = (reason || 'Something went wrong on my end.') + ' ';
+
+  const retry = document.createElement('button');
+  retry.type = 'button';
+  retry.className = 'retry';
+  retry.textContent = 'Try again';
+  retry.addEventListener('click', () => {
+    if (busy) return;
+    userTurn.remove();
+    turn.remove();
+    ask(question);
+  });
+
+  const mail = document.createElement('a');
+  mail.href = 'mailto:' + EMAIL;
+  mail.textContent = EMAIL;
+
+  pending.append(retry, document.createTextNode(', or email me at '), mail, document.createTextNode(" and I'll answer personally."));
+}
+
 async function ask(question) {
-  bubble('You', question, 'you');
+  if (busy) return;
+  question = question.slice(0, MAX_Q);
+  const userTurn = bubble('You', question, 'you').closest('.turn');
   history.push({ role: 'user', content: question });
   input.value = '';
-  sendBtn.disabled = true;
-
-  if (!CHAT_ENDPOINT) {
-    bubble('Jose', "The chat isn't wired up yet, but I'd genuinely rather hear from you directly. Email me at josheyvargas@icloud.com.");
-    sendBtn.disabled = false;
-    return;
-  }
+  setBusy(true);
 
   const pending = thinking();
   try {
@@ -454,18 +442,24 @@ async function ask(question) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ messages: history.slice(-10) })
     });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    const answer = (data.reply || '').trim() || "I couldn't come up with an answer to that one.";
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      // The Worker's 429 message ("Busy right now…") is written for visitors; other errors aren't.
+      history.pop();
+      fail(pending, userTurn, question, res.status === 429 && data.error ? data.error : null);
+      return;
+    }
+    const answer = plain(data.reply || '') || "I couldn't come up with an answer to that one.";
     pending.textContent = answer;
     history.push({ role: 'assistant', content: answer });
-    gtag('event', 'resume_chat', { question: question.slice(0, 100) });
+    // Usage count only; question text stays out of analytics.
+    gtag('event', 'resume_chat');
   } catch (err) {
-    pending.closest('.turn').classList.add('err');
-    pending.textContent = "Something went wrong on my end. Email me at josheyvargas@icloud.com and I'll answer personally.";
+    history.pop();
+    fail(pending, userTurn, question, navigator.onLine ? null : 'You look to be offline.');
   } finally {
-    sendBtn.disabled = false;
-    input.focus();
+    setBusy(false);
+    input.focus({ preventScroll: true });
   }
 }
 
@@ -475,7 +469,7 @@ composer.addEventListener('submit', (e) => {
   if (q) ask(q);
 });
 
-document.querySelectorAll('.sugg').forEach(b => {
+suggs.forEach(b => {
   b.addEventListener('click', () => ask(b.textContent.trim()));
 });
 </script>
